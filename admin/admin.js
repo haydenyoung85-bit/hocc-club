@@ -4,7 +4,19 @@
   var CFG = window.HOCC_ADMIN_CONFIG, SCHEMA = window.HOCC_SCHEMA;
   var API = 'https://api.github.com/repos/' + CFG.owner + '/' + CFG.repo + '/contents/';
   var app = document.getElementById('app');
-  var ADMIN_VERSION = '2026-11-23-rwb-username';
+  var ADMIN_VERSION = '2026-11-23-rwb-helpphone';
+  // Default website helper (used if Contact info > helper phone is empty)
+  var HELP_NAME = 'Hayden', HELP_PHONE = '(918) 916-3902';
+  function telHref(p) { var d = String(p).replace(/[^0-9]/g, ''); if (d.length === 10) d = '1' + d; return 'tel:+' + d; }
+  function helperName() { return (S.data && getPath(S.data, 'settings.helpName')) || HELP_NAME; }
+  function helperPhone() { return (S.data && getPath(S.data, 'settings.helpPhone')) || HELP_PHONE; }
+  function helpLine(prefix) {
+    var span = document.createElement('span');
+    span.appendChild(document.createTextNode((prefix || '') + 'Call or text ' + helperName() + ' at '));
+    var a = document.createElement('a'); a.href = telHref(helperPhone()); a.textContent = helperPhone(); a.className = 'tel';
+    span.appendChild(a); span.appendChild(document.createTextNode('.'));
+    return span;
+  }
   var S = { token: null, email: null, data: null, sha: null, work: null, section: null, dirty: false };
 
   /* ---------- small helpers ---------- */
@@ -89,7 +101,7 @@
   }
   function friendlyErr(e) {
     if (e && (e.status === 409 || e.status === 422)) return 'Someone else saved at the same time. Please make your change again.';
-    if (e && (e.status === 401 || e.status === 403)) return 'The website key stopped working. Please contact ' + (getPath(S.data || {}, 'settings.helpName') || 'your website helper') + '.';
+    if (e && (e.status === 401 || e.status === 403)) return 'The website key stopped working. Call or text ' + helperName() + ' at ' + helperPhone() + '.';
     return 'Could not save. Check your internet and try again.';
   }
 
@@ -129,7 +141,7 @@
         tries++;
         return sleep(Math.min(tries * 700, 5000)).then(function () {
           btn.disabled = false; btn.textContent = 'Log in';
-          if (x && x.notOn) err.textContent = 'The admin is not switched on yet. Please contact Hayden.';
+          if (x && x.notOn) { err.textContent = 'The admin is not switched on yet. '; err.appendChild(helpLine()); }
           else if (x && x.bad) err.textContent = 'That username or password is not right. Try again.';
           else err.textContent = 'Something went wrong. Check your internet and try again.';
         });
@@ -140,7 +152,7 @@
       h('p', { text: 'Log in to change the club website.' }),
       h('label', { for: 'email', text: 'Username' }), email,
       h('label', { for: 'pw', text: 'Password' }), pw, show, err, btn,
-      h('p', { class: 'small' }, ['Forgot your password? Ask your website helper to reset it.'])
+      h('p', { class: 'small' }, [helpLine('Forgot your password? ')])
     ]);
     app.appendChild(form);
     app.appendChild(h('p', { class: 'ver', text: 'Admin version ' + ADMIN_VERSION }));
@@ -155,7 +167,7 @@
       S.data = r.json; S.sha = r.sha;
       home();
     }).catch(function (e) {
-      if (e && (e.status === 401 || e.status === 403)) { logout(); loginScreen('The website key stopped working. Please contact Hayden.'); return; }
+      if (e && (e.status === 401 || e.status === 403)) { logout(); loginScreen('The website key stopped working.'); var er0 = document.querySelector('.err'); if (er0) { er0.appendChild(document.createTextNode(' ')); er0.appendChild(helpLine()); } return; }
       app.innerHTML = '';
       app.appendChild(h('div', { class: 'card center' }, [h('p', { class: 'big', text: 'Could not open the website. Check your internet and try again.' }), h('button', { class: 'btn go', onclick: start }, ['Try again'])]));
     });
@@ -184,10 +196,9 @@
     S.section = null; S.dirty = false;
     app.innerHTML = '';
     app.appendChild(topbar('Website admin'));
-    var helper = getPath(S.data, 'settings.helpPhone');
     app.appendChild(h('div', { class: 'card help' }, [
       h('p', {}, [h('strong', { text: 'How it works: ' }), 'Tap a button below. Change the words or photos. Then tap the red "Save and put on website" button. Your change shows on the website in about 1 to 2 minutes.']),
-      h('p', {}, ['Stuck? ', helper ? h('span', {}, ['Call or text ' + (getPath(S.data, 'settings.helpName') || 'your helper') + ' at ', h('a', { href: 'tel:' + helper.replace(/[^0-9+]/g, ''), text: helper }), '.']) : 'Call or text ' + (getPath(S.data, 'settings.helpName') || 'your website helper') + '.'])
+      h('p', {}, [helpLine('Stuck? ')])
     ]));
     var grid = h('div', { class: 'tiles' });
     SCHEMA.forEach(function (sec) {
