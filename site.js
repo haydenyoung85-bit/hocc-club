@@ -57,7 +57,14 @@
   function absUrl(file) { return new URL(file, location.href).href; }
   var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   function parseDate(s) { var p = String(s || '').split('-'); return p.length === 3 ? new Date(+p[0], +p[1] - 1, +p[2]) : null; }
-  function today() { var n = new Date(); return new Date(n.getFullYear(), n.getMonth(), n.getDate()); }
+  // "Today" in Oklahoma (Central time), no matter where the visitor is
+  function todayStr() {
+    try { return new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Chicago', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date()); }
+    catch (e) { var n = new Date(); return n.getFullYear() + '-' + String(n.getMonth() + 1).padStart(2, '0') + '-' + String(n.getDate()).padStart(2, '0'); }
+  }
+  function today() { return parseDate(todayStr()); }
+  function isPast(dateStr) { return /^\d{4}-\d{2}-\d{2}$/.test(String(dateStr || '')) && String(dateStr) < todayStr(); }
+  function eventLast(e) { return e.end || e.start || ''; }
 
   /* ---------- shared bits: header button, footer, bindings ---------- */
   function bindings() {
@@ -95,13 +102,14 @@
       (e.photo ? '<div class="ev-photo">' + img(e.photo, e.title) + '</div>' : '') + '</li>';
   }
   function upcoming() {
-    var t = today();
-    return shown(get('events.items')).filter(function (e) {
-      var end = parseDate(e.end) || parseDate(e.start);
-      return !end || end >= t;
-    }).sort(function (a, b) { return String(a.start).localeCompare(String(b.start)); });
+    return shown(get('events.items')).filter(function (e) { return !isPast(eventLast(e)); })
+      .sort(function (a, b) { return String(a.start || '9999').localeCompare(String(b.start || '9999')); });
   }
-  function noEvents() { return '<p class="no-events">No upcoming events listed. Check back soon or email <a href="mailto:' + esc(get('settings.email')) + '">' + esc(get('settings.email')) + '</a></p>'; }
+  function pastEvents() {
+    return shown(get('events.items')).filter(function (e) { return isPast(eventLast(e)); })
+      .sort(function (a, b) { return String(eventLast(b)).localeCompare(String(eventLast(a))); });
+  }
+  function noEvents() { return '<p class="no-events">' + esc(get('events.emptyText') || 'New dates coming soon. Check back!') + '</p>'; }
   function photoGrid(list, cls) {
     list = shown(list).filter(function (p) { return p.image; });
     if (!list.length) return '';
@@ -171,6 +179,8 @@
     fill('#events-intro', esc(D.events.intro));
     var ev = upcoming();
     fill('#events-list', ev.length ? '<ul class="events">' + ev.map(eventRow).join('') + '</ul>' : noEvents());
+    var past = pastEvents().slice(0, 12);
+    fill('#past-events', past.length ? '<details class="check past"><summary>Past events (' + past.length + ')</summary><div class="acc-body"><ul class="events">' + past.map(eventRow).join('') + '</ul></div></details>' : '');
     fill('#meetings', (D.events.meetings || []).map(function (m) {
       return '<div class="card"><h3>' + esc(m.name) + '</h3><address>' + br(m.address) + (m.phone ? '<br>' + esc(m.phone) : '') + '</address></div>';
     }).join(''));
@@ -259,10 +269,14 @@
   /* ---------- car show + (hidden) registration ---------- */
   R.carshow = function () {
     var c = D.carShow;
-    fill('#cs-label', esc(c.label));
+    var over = isPast(c.endDate), regOpen = registrationOpen();
+    fill('#cs-label', esc(over ? (c.pastLabel || 'Past show') : c.label));
     fill('#cs-title', esc(c.title));
     fill('#cs-when', esc([c.dates, c.venue].filter(Boolean).join(' · ')));
-    fill('#cs-status', c.status ? '<p class="status-note">' + esc(c.status) + '</p>' : '');
+    // after the show: thank-you + "registration isn't open yet" instead of the old sold-out banner
+    var status = over && !regOpen ? (c.pastNote || 'Thank you to everyone who came! Registration for the next show is not open yet. Check back soon.') : c.status;
+    fill('#cs-status', status ? '<p class="status-note">' + esc(status) + '</p>' : '');
+    fill('#cs-hotels-note', over && c.hotelsPastNote ? '<p class="big-note">' + esc(c.hotelsPastNote) + '</p>' : '');
     fill('#cs-opening', c.openingNote ? '<p class="big-note">' + esc(c.openingNote) + '</p>' : '');
     fill('#cs-highlights', lines(c.highlights));
     fill('#cs-details', lines(c.details));
@@ -299,7 +313,7 @@
     var r = D.registration || {};
     if (r.enabled !== true) return false;
     var od = parseDate(r.openDate);
-    return !od || today() >= od;
+    return !od || today() >= od;  // Central time
   }
   function registration() {
     var sec = $('#register-sec');

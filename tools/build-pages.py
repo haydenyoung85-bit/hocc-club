@@ -207,7 +207,7 @@ page("about.html", "About & Officers", "about", "about.html", title_block("About
 ''')
 
 page("events.html", "Upcoming Events", "events", "events.html", title_block("On the calendar", "Upcoming Events", "events-intro") + '''
-  <section><div class="wrap narrow" id="events-list"></div></section>
+  <section><div class="wrap narrow"><div id="events-list"></div><div id="past-events" hidden></div></div></section>
   <section class="band" id="meetings-sec">
     <div class="wrap">
       <p class="label">Where we meet</p>
@@ -247,6 +247,7 @@ page("car-show.html", "Car Show", "car-show", "car-show.html", '''
     <div class="wrap">
       <p class="label">Where to stay</p>
       <h2 class="hand-h">Hotels &amp; lodging</h2>
+      <div id="cs-hotels-note" hidden></div>
       <p>Use the group code when you call, or scan the QR code with your phone camera.</p>
       <ul class="hotels" id="cs-hotels"></ul>
     </div>

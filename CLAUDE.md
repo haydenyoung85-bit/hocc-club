@@ -69,3 +69,8 @@ GitHub Pages tells browsers to cache files for 10 minutes. So:
 
 ## Colors
 Club theme is red, white and blue: red `#C8102E` (main buttons), blue `#0A2463`, navy text `#0b1b3f`, white, warm off-white `#f8f5ef`. Flag stripes (hard color stops) under the header and above the footer are the only "gradient". (CSS variable names like `--teal`/`--gold` are legacy; their values are the blue/red.)
+
+## Dates stay current by themselves
+- site.js computes "today" in Central time (America/Chicago) on every page load.
+- Events whose end date (or start date) is before today are dropped from the home page and Upcoming list and shown in a collapsed "Past events" list on events.html. If nothing is upcoming, `events.emptyText` is shown.
+- `carShow.endDate`: after that day the car show page shows `pastLabel` / `pastNote` ("registration isn't open yet") and `hotelsPastNote` instead of the pre-show label and banner. Set a new endDate + dates when the next show is announced. Never invent dates.

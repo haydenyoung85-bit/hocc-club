@@ -7,7 +7,7 @@
   "phone": "",
   "address": "17118 N. County Rd. 3197\nPauls Valley, OK 73075",
   "facebook": "https://www.facebook.com/groups/1453977328508756",
-  "headerButtonText": "2027 Car Show",
+  "headerButtonText": "Car Show",
   "headerButtonShort": "Car Show",
   "headerButtonLink": "car-show.html",
   "footerFine": "Incorporated in Oklahoma as a Not For Profit Corporation on June 12, 2023. 501(c)(3). EIN 93-1833147.",
@@ -109,7 +109,7 @@
   "items": []
  },
  "events": {
-  "intro": "Membership is required for club sponsored events. Past events disappear by themselves.",
+  "intro": "Membership is required for club sponsored events.",
   "items": [
    {
     "title": "HOCC's Annual Fall Foliage Corvette Cruise Adventure",
@@ -183,7 +183,8 @@
     "address": "1005 SW 4th St\nMoore, OK 73160",
     "phone": ""
    }
-  ]
+  ],
+  "emptyText": "New dates coming soon. Check back!"
  },
  "carShow": {
   "label": "Past event · Sold out",
@@ -319,7 +320,11 @@
     "link": ""
    }
   ],
-  "benefitText": "Show proceeds benefit Autism Oklahoma and the Sgt. Miles Tarron Foundation."
+  "benefitText": "Show proceeds benefit Autism Oklahoma and the Sgt. Miles Tarron Foundation.",
+  "endDate": "2026-07-26",
+  "pastLabel": "Past show · Thank you!",
+  "pastNote": "Thank you to everyone who came! Registration for the next show is not open yet. Check back soon.",
+  "hotelsPastNote": "These were the hotel deals for the 2026 show. New hotel deals will be posted here when the next show is announced."
  },
  "registration": {
   "enabled": false,
