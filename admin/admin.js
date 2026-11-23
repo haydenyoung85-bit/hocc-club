@@ -4,7 +4,7 @@
   var CFG = window.HOCC_ADMIN_CONFIG, SCHEMA = window.HOCC_SCHEMA;
   var API = 'https://api.github.com/repos/' + CFG.owner + '/' + CFG.repo + '/contents/';
   var app = document.getElementById('app');
-  var ADMIN_VERSION = '2026-11-23-rwb-helpphone';
+  var ADMIN_VERSION = '2026-11-23-v3-register';
   // Default website helper (used if Contact info > helper phone is empty)
   var HELP_NAME = 'Hayden', HELP_PHONE = '(918) 916-3902';
   function telHref(p) { var d = String(p).replace(/[^0-9]/g, ''); if (d.length === 10) d = '1' + d; return 'tel:+' + d; }
