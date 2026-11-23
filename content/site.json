@@ -170,17 +170,6 @@
     "address": "4302 SW 119th St, OKC, OK 73173",
     "details": "",
     "show": true
-   },
-   {
-    "title": "TEST Admin event",
-    "start": "2026-12-30",
-    "end": "",
-    "time": "6:00 pm",
-    "place": "",
-    "address": "",
-    "details": "",
-    "photo": "",
-    "show": true
    }
   ],
   "meetings": [
@@ -376,12 +365,6 @@
     "photos": [
      {
       "image": "images/decd3454-Finleyforsale1.jpg"
-     },
-     {
-      "image": "images/16921434-image-asset.jpeg"
-     },
-     {
-      "image": "images/16921435-image-asset.jpeg"
      }
     ],
     "contactName": "David Finley",
@@ -389,21 +372,6 @@
     "email": "",
     "status": "approved",
     "sold": true
-   },
-   {
-    "title": "TEST 1999 C5 Coupe",
-    "price": "$9,999",
-    "description": "Test listing from the admin panel.",
-    "photos": [
-     {
-      "image": "images/uploads/20261123-lqsipv-test-photo.jpg"
-     }
-    ],
-    "contactName": "",
-    "phone": "",
-    "email": "",
-    "status": "approved",
-    "sold": false
    }
   ]
  },
