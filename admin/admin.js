@@ -186,7 +186,7 @@
     app.appendChild(topbar('Website admin'));
     var helper = getPath(S.data, 'settings.helpPhone');
     app.appendChild(h('div', { class: 'card help' }, [
-      h('p', {}, [h('strong', { text: 'How it works: ' }), 'Tap a button below. Change the words or photos. Then tap the green "Save and put on website" button. Your change shows on the website in about 1 to 2 minutes.']),
+      h('p', {}, [h('strong', { text: 'How it works: ' }), 'Tap a button below. Change the words or photos. Then tap the red "Save and put on website" button. Your change shows on the website in about 1 to 2 minutes.']),
       h('p', {}, ['Stuck? ', helper ? h('span', {}, ['Call or text ' + (getPath(S.data, 'settings.helpName') || 'your helper') + ' at ', h('a', { href: 'tel:' + helper.replace(/[^0-9+]/g, ''), text: helper }), '.']) : 'Call or text ' + (getPath(S.data, 'settings.helpName') || 'your website helper') + '.'])
     ]));
     var grid = h('div', { class: 'tiles' });
@@ -424,7 +424,7 @@
         var body = h('div', { class: 'item-body' });
         f.item.forEach(function (sf) { body.appendChild(renderField(sf, it)); });
         if (f.approve && it[f.statusKey] === f.approve.from) {
-          body.insertBefore(h('button', { class: 'btn go huge approve', type: 'button', onclick: function () { it[f.statusKey] = f.approve.value; markDirty(); paint(); toast('Approved. Now tap the green Save button to put it on the website.'); } }, [f.approve.label]), body.firstChild);
+          body.insertBefore(h('button', { class: 'btn go huge approve', type: 'button', onclick: function () { it[f.statusKey] = f.approve.value; markDirty(); paint(); toast('Approved. Now tap the red Save button to put it on the website.'); } }, [f.approve.label]), body.firstChild);
         }
         body.appendChild(h('div', { class: 'row-btns' }, [
           h('button', { class: 'btn plain small', type: 'button', disabled: i === 0 ? true : null, onclick: function () { move(i, -1); } }, ['⬆ Move up']),

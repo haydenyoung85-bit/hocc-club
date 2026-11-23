@@ -1,7 +1,7 @@
 # Heart of Oklahoma Corvette Club website
 
 ## For the club and Hayden (plain English)
-- **To change the website, use the admin:** go to `/admin/` on the site, log in, tap a button, change words or photos, and tap the green **Save and put on website** button. Changes show up in 1 to 2 minutes.
+- **To change the website, use the admin:** go to `/admin/` on the site, log in, tap a button, change words or photos, and tap the red **Save and put on website** button. Changes show up in 1 to 2 minutes.
 - **Developers / Claude:** read `CLAUDE.md` first. Content lives in `content/site.json`; don't hardcode it into the HTML.
 - Show registration is built but switched OFF until the club turns it on in the admin. Payments use the club's PayPal.
 
