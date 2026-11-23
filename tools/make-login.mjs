@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // Creates (or adds to) admin/login.json: the website key, locked with an editor's email + password.
-// Usage: node tools/make-login.mjs --email you@example.com --password-file pw.txt --token-file token.txt --out admin/login.json [--append]
+// --email is the login name (a username like HOCCadmin, or an email). Case-insensitive.
+// Usage: node tools/make-login.mjs --email HOCCadmin --password-file pw.txt --token-file token.txt --out admin/login.json [--append]
 // The token should be a GitHub fine-grained token for ONLY this repository with "Contents: Read and write".
 // Never prints the token or the password.
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
@@ -12,7 +13,7 @@ for (const k of ['email', 'password-file', 'token-file', 'out']) if (!args[k] ||
 const email = String(args.email).trim().toLowerCase();
 const password = readFileSync(args['password-file'], 'utf8').replace(/\r?\n$/, '');
 const token = readFileSync(args['token-file'], 'utf8').trim();
-if (password.length < 12) { console.error('Password must be at least 12 characters'); process.exit(1); }
+if (password.length < 8) { console.error('Password must be at least 8 characters'); process.exit(1); }
 const { subtle } = globalThis.crypto;
 const b64 = (u) => Buffer.from(u).toString('base64');
 const salt = crypto.getRandomValues(new Uint8Array(16)), iv = crypto.getRandomValues(new Uint8Array(12));

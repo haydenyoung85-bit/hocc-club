@@ -100,7 +100,7 @@
   }
   function loginScreen(msg) {
     app.innerHTML = '';
-    var email = h('input', { id: 'email', type: 'email', autocomplete: 'username', required: true });
+    var email = h('input', { id: 'email', type: 'text', autocomplete: 'username', autocapitalize: 'none', autocorrect: 'off', spellcheck: 'false', required: true });
     var pw = h('input', { id: 'pw', type: 'password', autocomplete: 'current-password', required: true });
     var show = h('label', { class: 'check-row' }, [h('input', { type: 'checkbox', onchange: function (e) { pw.type = e.target.checked ? 'text' : 'password'; } }), ' Show my password']);
     var err = h('p', { class: 'err', role: 'alert' }, [msg || '']);
@@ -124,7 +124,7 @@
         return sleep(Math.min(tries * 700, 5000)).then(function () {
           btn.disabled = false; btn.textContent = 'Log in';
           if (x && x.notOn) err.textContent = 'The admin is not switched on yet. Please contact Hayden.';
-          else if (x && x.bad) err.textContent = 'That email or password is not right. Try again.';
+          else if (x && x.bad) err.textContent = 'That username or password is not right. Try again.';
           else err.textContent = 'Something went wrong. Check your internet and try again.';
         });
       });
@@ -132,7 +132,7 @@
       h('img', { src: '../images/1b97d2c0-HOCC-Logo.png', alt: '', class: 'login-logo' }),
       h('h1', { text: 'Website admin' }),
       h('p', { text: 'Log in to change the club website.' }),
-      h('label', { for: 'email', text: 'Email' }), email,
+      h('label', { for: 'email', text: 'Username' }), email,
       h('label', { for: 'pw', text: 'Password' }), pw, show, err, btn,
       h('p', { class: 'small' }, ['Forgot your password? Ask your website helper to reset it.'])
     ]);
@@ -502,16 +502,16 @@
       } }, ['Save my new password'])]));
 
     var listBox = h('div');
-    var ne = h('input', { type: 'email', id: 'ne' }), np = h('input', { type: 'password', id: 'np', autocomplete: 'new-password' });
+    var ne = h('input', { type: 'text', id: 'ne', autocapitalize: 'none', autocorrect: 'off', spellcheck: 'false' }), np = h('input', { type: 'password', id: 'np', autocomplete: 'new-password' });
     var msg2 = h('p', { class: 'err', role: 'alert' });
     app.appendChild(h('div', { class: 'card' }, [
       h('h2', { text: 'People who can edit the website' }), listBox,
       h('h3', { text: 'Add another editor' }),
-      h('label', { for: 'ne', text: 'Their email' }), ne, h('label', { for: 'np', text: 'A password for them (at least 12 letters)' }), np, msg2,
+      h('label', { for: 'ne', text: 'Their username' }), ne, h('label', { for: 'np', text: 'A password for them (at least 12 letters)' }), np, msg2,
       h('button', { class: 'btn blue', type: 'button', onclick: function () {
         msg2.textContent = '';
         var em = ne.value.trim().toLowerCase();
-        if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)) { msg2.textContent = 'Please type their email.'; return; }
+        if (!/^\S{3,}$/.test(em)) { msg2.textContent = 'Please type a username (at least 3 letters, no spaces).'; return; }
         if (!pwOk(np.value)) { msg2.textContent = 'Please use at least 12 letters for their password.'; return; }
         var b = busy('Adding the editor…');
         Promise.all([readLogin(), encryptToken(S.token, np.value)]).then(function (r) {

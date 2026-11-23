@@ -20,7 +20,7 @@ the club (through the admin panel) and developers/Claude (through git). Don't br
 | `tools/seed-content.py` | One-time seed used at launch. **Do not run again** — it would wipe the club's edits. |
 | `tools/make-login.mjs` | Creates/updates `admin/login.json` (encrypted admin login). |
 | `admin/` | Admin panel: `index.html`, `admin.js` (logic), `schema.js` (which fields of site.json are editable and how), `admin.css`, `config.js` (repo/branch/paths). |
-| `admin/login.json` | Encrypted GitHub token per editor (AES-GCM, PBKDF2 600k). **Never edit, regenerate, or delete it.** Editors change passwords/add editors in the admin. |
+| `admin/login.json` | Encrypted GitHub token per editor (AES-GCM, PBKDF2 600k). One editor today: username `HOCCadmin` (case-insensitive). The JSON field is still called `email` but holds the username. **Never edit, regenerate, or delete it.** Editors change passwords/add editors in the admin. |
 | `images/` | Original photos. `images/uploads/` = photos uploaded by the admin. Don't rename or delete files referenced in site.json. |
 | `files/` | Downloads (membership application). |
 | `car-show-2026.html` | Redirect to `car-show.html` (old link). |
