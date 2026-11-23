@@ -1,0 +1,200 @@
+/* Describes every editable part of the website (content/site.json) for the admin panel. */
+(function () {
+  var showField = { key: 'show', label: 'Show this on the website', type: 'toggle', def: true };
+  var photoList = function (key, label, help) {
+    return { key: key, label: label, help: help, type: 'list', photos: true, itemTitle: 'caption', addLabel: 'Add a photo',
+      item: [{ key: 'image', label: 'Photo', type: 'image' }, { key: 'caption', label: 'Caption (optional)', type: 'text' }], newItem: { image: '', caption: '' } };
+  };
+  window.HOCC_SCHEMA = [
+    { id: 'home', icon: '🏠', title: 'Home page', path: 'home', help: 'The big picture and words at the top of the home page.',
+      fields: [
+        { key: 'heroTitle', label: 'Big headline', type: 'longtext' },
+        { key: 'heroText', label: 'Words under the headline (computers only)', type: 'longtext' },
+        { key: 'heroEyebrow', label: 'Small line above the headline', type: 'text' },
+        { key: 'heroImage', label: 'Big background photo', type: 'image' },
+        { key: 'heroButtonText', label: 'Gold button words', type: 'text' },
+        { key: 'heroButtonLink', label: 'Gold button goes to', type: 'link' },
+        { key: 'heroButton2Text', label: 'Second button words (leave empty to hide)', type: 'text' },
+        { key: 'heroButton2Link', label: 'Second button goes to', type: 'link' },
+        { key: 'photosTitle', label: 'Photo section title', type: 'text' },
+        photoList('photos', 'Photos on the home page', 'Pick 4 favorite photos.'),
+        { key: 'givingText', label: '"Giving back" words', type: 'longtext' },
+        { key: 'joinText', label: '"Join the club" words', type: 'longtext' }
+      ] },
+    { id: 'events', icon: '📅', title: 'Events', path: 'events', help: 'Past events disappear from the website by themselves the day after they end.',
+      fields: [
+        { key: 'items', label: 'Events', type: 'list', itemTitle: 'title', itemSub: 'start', addLabel: 'Add an event', sortBy: 'start',
+          newItem: { title: '', start: '', end: '', time: '', place: '', address: '', details: '', photo: '', show: true },
+          item: [
+            { key: 'title', label: 'Event name', type: 'text' },
+            { key: 'start', label: 'Date (first day)', type: 'date' },
+            { key: 'end', label: 'Last day (only if more than one day)', type: 'date' },
+            { key: 'time', label: 'Time (for example: 1:00 pm – 3:00 pm)', type: 'text' },
+            { key: 'place', label: 'Place name', type: 'text' },
+            { key: 'address', label: 'Street address', type: 'text' },
+            { key: 'details', label: 'More details (optional)', type: 'longtext' },
+            { key: 'photo', label: 'Photo (optional)', type: 'image' },
+            showField] },
+        { key: 'intro', label: 'Words at the top of the Events page', type: 'longtext' },
+        { key: 'meetings', label: 'Meeting places', type: 'list', itemTitle: 'name', addLabel: 'Add a meeting place', newItem: { name: '', address: '', phone: '' },
+          item: [{ key: 'name', label: 'Name', type: 'text' }, { key: 'address', label: 'Address', type: 'longtext' }, { key: 'phone', label: 'Phone', type: 'phone' }] }
+      ] },
+    { id: 'carshow', icon: '🏁', title: 'Car Show', path: 'carShow', help: 'Everything on the Car Show page except registration (that has its own button).',
+      fields: [
+        { key: 'title', label: 'Show name', type: 'text' },
+        { key: 'label', label: 'Small line above the name (for example: Past event · Sold out)', type: 'text' },
+        { key: 'dates', label: 'Dates', type: 'text' },
+        { key: 'venue', label: 'Where', type: 'text' },
+        { key: 'status', label: 'Red banner message (leave empty to hide)', type: 'longtext' },
+        { key: 'openingNote', label: 'Note about when registration opens (leave empty to hide)', type: 'longtext' },
+        { key: 'highlights', label: 'Highlights (one per line)', type: 'longtext' },
+        { key: 'details', label: 'Show details (one per line)', type: 'longtext' },
+        { key: 'image', label: 'Photo next to the details', type: 'image' },
+        { key: 'imageCaption', label: 'Photo caption', type: 'text' },
+        { key: 'benefitText', label: 'Who the show benefits', type: 'longtext' },
+        { key: 'camper', label: 'Camper information (one per line)', type: 'longtext' },
+        { key: 'shuttle', label: 'Shuttle information (one per line)', type: 'longtext' },
+        { key: 'shuttleLink', label: 'Shuttle website', type: 'url' },
+        { key: 'shuttleLogo', label: 'Shuttle logo', type: 'image' },
+        { key: 'classes', label: 'Show classes', type: 'list', itemTitle: 'name', itemSub: 'desc', addLabel: 'Add a class', newItem: { name: '', desc: '' },
+          item: [{ key: 'name', label: 'Class name', type: 'text' }, { key: 'desc', label: 'Which cars', type: 'text' }] },
+        { key: 'partners', label: 'Logos at the bottom of the page', type: 'list', itemTitle: 'name', addLabel: 'Add a logo', newItem: { image: '', name: '', link: '' },
+          item: [{ key: 'image', label: 'Logo', type: 'image' }, { key: 'name', label: 'Name', type: 'text' }, { key: 'link', label: 'Website (optional)', type: 'url' }] }
+      ] },
+    { id: 'hotels', icon: '🏨', title: 'Hotels & QR codes', path: 'carShow', help: 'The hotels paired with the car show, and any QR codes people can scan.',
+      fields: [
+        { key: 'hotels', label: 'Hotels', type: 'list', itemTitle: 'name', addLabel: 'Add a hotel',
+          newItem: { name: '', logo: '', rate: '', code: '', phone: '', notes: '', link: '', qr: '', show: true },
+          item: [
+            { key: 'name', label: 'Hotel name', type: 'text' },
+            { key: 'rate', label: 'Room rate', type: 'text' },
+            { key: 'code', label: 'Group or block code', type: 'text' },
+            { key: 'phone', label: 'Phone', type: 'phone' },
+            { key: 'notes', label: 'Notes', type: 'longtext' },
+            { key: 'link', label: 'Booking website', type: 'url' },
+            { key: 'qr', label: 'QR code picture', type: 'image', keepPng: true },
+            { key: 'logo', label: 'Hotel logo', type: 'image', keepPng: true },
+            showField] },
+        { key: 'qrCodes', label: 'Other QR codes', type: 'list', itemTitle: 'title', addLabel: 'Add a QR code', newItem: { title: '', image: '', link: '', caption: '', show: true },
+          item: [{ key: 'title', label: 'What it is for', type: 'text' }, { key: 'image', label: 'QR code picture', type: 'image', keepPng: true },
+            { key: 'link', label: 'Where it goes (optional)', type: 'url' }, { key: 'caption', label: 'Short note (optional)', type: 'text' }, showField] }
+      ] },
+    { id: 'registration', icon: '📝', title: 'Show Registration', path: 'registration', badge: 'regStatus',
+      help: 'Registration is hidden from the public until you switch it ON.',
+      fields: [
+        { key: 'enabled', label: 'Show registration on the website', type: 'bigswitch',
+          on: 'ON: the Register form shows on the Car Show page (starting on the opening date below).', off: 'OFF: nobody can see show registration.' },
+        { key: 'openDate', label: 'Opening date', type: 'date' },
+        { key: 'cap', label: 'Total spots', type: 'number' },
+        { key: 'spotsLeft', label: 'Spots left (lower this as people register; 0 = waiting list)', type: 'number' },
+        { key: 'fee', label: 'Registration price ($)', type: 'money' },
+        { key: 'dinnerPrice', label: 'Dinner ticket price ($)', type: 'money', needsInfo: true },
+        { key: 'shirtPrice', label: 'Show T-shirt price ($)', type: 'money', needsInfo: true },
+        { key: 'shirtSizes', label: 'T-shirt sizes (separate with commas)', type: 'text' },
+        { key: 'shirtPopup', label: 'Offer a T-shirt in a pop-up before the form', type: 'toggle' },
+        { key: 'shirtImage', label: 'T-shirt picture for the pop-up', type: 'image' },
+        { key: 'paypalLink', label: 'PayPal payment link (people go here after the form)', type: 'url', needsInfo: true },
+        { key: 'intro', label: 'Words above the form', type: 'longtext' },
+        { key: 'waitlistText', label: 'Words when the show is full', type: 'longtext' },
+        { key: 'terms', label: 'Small print', type: 'longtext' }
+      ] },
+    { id: 'forsale', icon: '🚗', title: 'For Sale', path: 'forSale', badge: 'pending',
+      help: 'Sellers send listings to the club email. Add the listing here. It stays hidden until you press Approve.',
+      fields: [
+        { key: 'listings', label: 'Listings', type: 'list', itemTitle: 'title', addLabel: 'Add a listing from an email', statusKey: 'status',
+          approve: { value: 'approved', from: 'pending', label: '✅ Approve – put it on the website' },
+          newItem: { title: '', price: '', description: '', photos: [], contactName: '', phone: '', email: '', status: 'pending', sold: false },
+          item: [
+            { key: 'status', label: 'Where is this listing?', type: 'select', options: [['pending', 'Waiting for approval (hidden)'], ['approved', 'On the website'], ['hidden', 'Hidden']] },
+            { key: 'title', label: 'Title', type: 'text' },
+            { key: 'price', label: 'Price', type: 'text' },
+            { key: 'description', label: 'Description', type: 'longtext' },
+            { key: 'photos', label: 'Photos', type: 'list', photos: true, addLabel: 'Add a photo', newItem: { image: '' }, item: [{ key: 'image', label: 'Photo', type: 'image' }] },
+            { key: 'contactName', label: 'Seller name', type: 'text' },
+            { key: 'phone', label: 'Seller phone', type: 'phone' },
+            { key: 'email', label: 'Seller email', type: 'email' },
+            { key: 'sold', label: 'SOLD (shows a Sold badge)', type: 'toggle' }] },
+        { key: 'intro', label: 'Words at the top of the For Sale page', type: 'longtext' }
+      ] },
+    { id: 'sponsors', icon: '🤝', title: 'Sponsors', path: 'sponsors', help: 'Sponsor logos show on the home page and the Charities & Sponsors page.',
+      fields: [
+        { key: 'items', label: 'Sponsors', type: 'list', itemTitle: 'name', addLabel: 'Add a sponsor', newItem: { name: '', logo: '', link: '', darkBg: false, show: true },
+          item: [{ key: 'name', label: 'Sponsor name', type: 'text' }, { key: 'logo', label: 'Logo', type: 'image', keepPng: true },
+            { key: 'link', label: 'Website (optional)', type: 'url' }, { key: 'darkBg', label: 'Logo is white (put it on a dark background)', type: 'toggle' }, showField] },
+        { key: 'intro', label: 'Words above the sponsor logos', type: 'longtext' },
+        { key: 'trailerPhoto', label: 'Trailer photo', type: 'image' },
+        { key: 'trailerCaption', label: 'Trailer photo caption', type: 'text' }
+      ] },
+    { id: 'newmembers', icon: '👋', title: 'New Members', path: 'newMembers', help: 'Welcome new members. They show on the home page and the About page.',
+      fields: [
+        { key: 'items', label: 'New members', type: 'list', itemTitle: 'name', itemSub: 'joined', addLabel: 'Add a new member', newItem: { name: '', joined: '', photo: '', show: true },
+          item: [{ key: 'name', label: 'Name(s)', type: 'text' }, { key: 'joined', label: 'Joined (for example: November 2026)', type: 'text' }, { key: 'photo', label: 'Photo (optional)', type: 'image' }, showField] },
+        { key: 'title', label: 'Section title', type: 'text' },
+        { key: 'intro', label: 'Words under the title (optional)', type: 'longtext' }
+      ] },
+    { id: 'officers', icon: '⭐', title: 'Officers & About', path: 'about', help: 'Club officers, the purpose statement and questions & answers.',
+      fields: [
+        { key: 'officers', label: 'Officers', type: 'list', itemTitle: 'name', itemSub: 'role', addLabel: 'Add an officer', newItem: { name: '', role: '', photo: '', bio: '', show: true },
+          item: [{ key: 'name', label: 'Name', type: 'text' }, { key: 'role', label: 'Job (for example: President)', type: 'text' }, { key: 'photo', label: 'Photo', type: 'image' }, { key: 'bio', label: 'About them', type: 'longtext' }, showField] },
+        { key: 'purpose', label: 'Club purpose', type: 'longtext' },
+        { key: 'photo', label: 'About page photo', type: 'image' },
+        { key: 'photoCaption', label: 'Photo caption', type: 'text' },
+        { key: 'faqs', label: 'Questions & answers', type: 'list', itemTitle: 'q', addLabel: 'Add a question', newItem: { q: '', a: '', show: true },
+          item: [{ key: 'q', label: 'Question', type: 'text' }, { key: 'a', label: 'Answer', type: 'longtext' }, showField] }
+      ] },
+    { id: 'photos', icon: '📷', title: 'Photos', path: 'gallery', help: 'The Photos page. You can add many photos at once.',
+      fields: [photoList('photos', 'Photos', ''), { key: 'intro', label: 'Words at the top of the Photos page', type: 'longtext' }] },
+    { id: 'apparel', icon: '👕', title: 'Apparel Store', path: 'apparel', help: 'Shirts and club gear. Paste a PayPal link to show a Buy button.',
+      fields: [
+        { key: 'drtLink', label: 'DRT shop link', type: 'url', needsInfo: true, help: 'When you paste the link, a big DRT Shop button appears on the Apparel page.' },
+        { key: 'drtTitle', label: 'DRT shop title', type: 'text' },
+        { key: 'drtText', label: 'DRT shop words', type: 'longtext' },
+        { key: 'items', label: 'Items', type: 'list', itemTitle: 'name', itemSub: 'price', addLabel: 'Add an item', newItem: { name: '', image: '', price: '', sizes: '', description: '', buyLink: '', show: true },
+          item: [{ key: 'name', label: 'Item name', type: 'text' }, { key: 'image', label: 'Photo', type: 'image' }, { key: 'price', label: 'Price ($)', type: 'money' },
+            { key: 'sizes', label: 'Sizes', type: 'text' }, { key: 'description', label: 'Description', type: 'longtext' },
+            { key: 'buyLink', label: 'PayPal "Buy" link (empty = people email the club)', type: 'url' }, showField] },
+        { key: 'intro', label: 'Words at the top of the Apparel page', type: 'longtext' }
+      ] },
+    { id: 'membership', icon: '🪪', title: 'Membership', path: 'membership', help: 'Membership prices, payment links and the application.',
+      fields: [
+        { key: 'singleLabel', label: 'First membership name', type: 'text' },
+        { key: 'singlePrice', label: 'First membership price ($)', type: 'money' },
+        { key: 'familyLabel', label: 'Second membership name', type: 'text' },
+        { key: 'familyPrice', label: 'Second membership price ($)', type: 'money' },
+        { key: 'paypalSingle', label: 'PayPal link for the first membership', type: 'url', needsInfo: true },
+        { key: 'paypalFamily', label: 'PayPal link for the second membership', type: 'url', needsInfo: true },
+        { key: 'intro', label: 'Words at the top of the Membership page', type: 'longtext' },
+        { key: 'renewNote', label: 'Renewal note', type: 'longtext' },
+        { key: 'payNote', label: 'Note above the pay buttons', type: 'longtext' },
+        { key: 'checkText', label: 'Pay by check words', type: 'longtext' },
+        { key: 'applicationFile', label: 'Application file (Word or PDF)', type: 'file' },
+        photoList('photos', 'Photos at the bottom of the page', '')
+      ] },
+    { id: 'contact', icon: '☎️', title: 'Contact info', path: 'settings', help: 'Shows in the footer of every page and on the Contact page.',
+      fields: [
+        { key: 'email', label: 'Club email (website forms are sent here)', type: 'email' },
+        { key: 'phone', label: 'Club phone (leave empty to hide)', type: 'phone', needsInfo: true },
+        { key: 'address', label: 'Mailing address', type: 'longtext' },
+        { key: 'facebook', label: 'Facebook page link', type: 'url' },
+        { key: 'donateLink', label: 'PayPal Donate link', type: 'url' },
+        { key: 'headerButtonText', label: 'Gold button at the top of every page (computers)', type: 'text' },
+        { key: 'headerButtonShort', label: 'Gold button at the top (phones, short)', type: 'text' },
+        { key: 'headerButtonLink', label: 'Gold button goes to', type: 'link' },
+        { key: 'footerFine', label: 'Small print at the bottom of every page', type: 'longtext' },
+        { key: 'helpName', label: 'Website helper name (shown only here in the admin)', type: 'text' },
+        { key: 'helpPhone', label: 'Website helper phone (shown only here in the admin)', type: 'phone' }
+      ] },
+    { id: 'contactpage', icon: '✉️', title: 'Contact page', path: 'contact', help: 'The Contact page message form.',
+      fields: [{ key: 'intro', label: 'Words at the top of the Contact page', type: 'longtext' }, { key: 'formOn', label: 'Show the "Send us a message" form', type: 'toggle' }] },
+    { id: 'charities', icon: '💛', title: 'Charities', path: 'charities', help: 'The charities the club supports.',
+      fields: [
+        { key: 'items', label: 'Charities', type: 'list', itemTitle: 'name', addLabel: 'Add a charity', newItem: { name: '', logo: '', text: '', address: '', link: '', show: true },
+          item: [{ key: 'name', label: 'Name', type: 'text' }, { key: 'logo', label: 'Logo', type: 'image', keepPng: true }, { key: 'text', label: 'About them', type: 'longtext' },
+            { key: 'address', label: 'Address and phone', type: 'longtext' }, { key: 'link', label: 'Website or Facebook (optional)', type: 'url' }, showField] },
+        { key: 'intro', label: 'Words at the top of the page', type: 'longtext' }
+      ] },
+    { id: 'text', icon: '🔤', title: 'All page words', path: 'text', help: 'Every heading and button on every page. Leave a box empty to hide that heading.', fields: 'textmap' }
+  ];
+  window.HOCC_LINKS = [['index.html', 'Home page'], ['about.html', 'About page'], ['events.html', 'Events page'], ['car-show.html', 'Car Show page'], ['gallery.html', 'Photos page'],
+    ['for-sale.html', 'For Sale page'], ['apparel.html', 'Apparel page'], ['membership.html', 'Membership page'], ['charities.html', 'Charities & Sponsors page'], ['contact.html', 'Contact page']];
+})();

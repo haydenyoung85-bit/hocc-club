@@ -3,132 +3,99 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
 <title>Heart of Oklahoma Corvette Club</title>
+<meta name="description" content="Heart of Oklahoma Corvette Club (HOCC): a not-for-profit Oklahoma Corvette club. Events, the Height of Summer Corvette Show, photos, for sale listings and membership.">
+<meta property="og:title" content="Heart of Oklahoma Corvette Club">
+<meta property="og:description" content="Heart of Oklahoma Corvette Club (HOCC): a not-for-profit Oklahoma Corvette club. Events, the Height of Summer Corvette Show, photos, for sale listings and membership.">
+<meta property="og:image" content="images/42bc1aed-CS-1.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="images/1b97d2c0-HOCC-Logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="tour.css"> <!-- PREVIEW TOUR: remove before launch -->
 </head>
-<body>
+<body data-page="home">
 <a class="skip" href="#main">Skip to main content</a>
 <header class="site-header">
   <div class="wrap header-top">
     <a class="brand" href="index.html"><img src="images/1b97d2c0-HOCC-Logo.png" alt="Heart of Oklahoma Corvette Club logo"><span>Heart of Oklahoma Corvette Club</span></a>
-    <a class="join-btn" href="membership.html"><span class="l-full">Register / Renew</span><span class="l-short">Register</span></a>
-    <details class="menu"><summary>Menu</summary><ul><li><a href="index.html" aria-current="page">Home</a></li><li><a href="about.html">About &amp; Officers</a></li><li><a href="events.html">Events</a></li><li><a href="gallery.html">Photos</a></li><li><a href="contact.html">Contact</a></li></ul></details>
+    <a class="join-btn" href="car-show.html" data-href="settings.headerButtonLink"><span class="l-full" data-t="settings.headerButtonText">2027 Car Show</span><span class="l-short" data-t="settings.headerButtonShort">Car Show</span></a>
+    <details class="menu"><summary>Menu</summary><ul><li><a href="index.html" aria-current="page">Home</a></li><li><a href="about.html">About</a></li><li><a href="events.html">Events</a></li><li><a href="car-show.html">Car Show</a></li><li><a href="gallery.html">Photos</a></li><li><a href="for-sale.html">For Sale</a></li><li><a href="apparel.html">Apparel</a></li><li><a href="contact.html">Contact</a></li><li><a href="membership.html">Membership</a></li><li><a href="charities.html">Charities & Sponsors</a></li></ul></details>
   </div>
-  <nav class="nav" aria-label="Main">
-    <div class="wrap"><ul>
-      <li><a href="index.html" aria-current="page">Home</a></li>
-      <li><a href="about.html">About &amp; Officers</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li><a href="gallery.html">Photos</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul></div>
-  </nav>
+  <nav class="nav" aria-label="Main"><div class="wrap"><ul><li><a href="index.html" aria-current="page">Home</a></li><li><a href="about.html">About</a></li><li><a href="events.html">Events</a></li><li><a href="car-show.html">Car Show</a></li><li><a href="gallery.html">Photos</a></li><li><a href="for-sale.html">For Sale</a></li><li><a href="apparel.html">Apparel</a></li><li><a href="contact.html">Contact</a></li></ul></div></nav>
 </header>
 
 <main id="main">
-  <div class="hero">
-    <img class="hero-img" src="images/42bc1aed-CS-1.jpg" alt="Rows of Corvettes with hoods raised at a car show inside the Southeast EXPO Center">
+<div class="hero">
+    <img class="hero-img" id="hero-img" src="images/42bc1aed-CS-1.jpg" alt="Rows of Corvettes with hoods raised at the club car show">
     <div class="wrap hero-text">
-      <p class="eyebrow hide-m">Oklahoma Corvette club &middot; Not-For-Profit &middot; 501(c)(3)</p>
-      <h1>Corvette people, good company, and a hand for those in need.</h1>
-      <p class="hide-m">We are a club of Corvette owners who take part in events and social activities together, and who are willing to support those in need, assist with charitable events and support our local schools and other community activities.</p>
+      <p class="eyebrow hide-m" id="hero-eyebrow">Oklahoma Corvette club &middot; Not-For-Profit &middot; 501(c)(3)</p>
+      <h1 id="hero-title">Corvette people, good company, and a hand for those in need.</h1>
+      <p class="hide-m" id="hero-text"></p>
       <div class="btn-row">
-        <a class="btn gold" href="membership.html">Register / Renew Membership</a>
-        <a class="btn light hide-m" href="events.html">Upcoming events</a>
+        <a class="btn gold" id="hero-b1" href="car-show.html">Car Show info</a>
+        <a class="btn light hide-m" id="hero-b2" href="events.html">Upcoming events</a>
       </div>
     </div>
   </div>
 
+  <section class="band">
+    <div class="wrap">
+      <p class="label" data-t="text.Home: On the calendar">On the calendar</p>
+      <h2 class="hand-h" data-t="text.Home: Coming up">Coming up</h2>
+      <div id="home-events"></div>
+      <p><a class="btn dark" href="events.html" data-t="text.Home: All upcoming events">All upcoming events</a></p>
+    </div>
+  </section>
+
   <section>
     <div class="wrap two">
       <div>
-        <p class="label">Our purpose</p>
-        <h2>Why the club exists</h2>
-        <p class="lead hide-m">&ldquo;The purpose of the Heart of Oklahoma Corvette Club (HOCC) is to encourage participation of the club members in events and social activities that promote HOCC and its membership. The members of HOCC are willing to support those in need, assist with charitable events and support our local schools and other community activities.&rdquo;</p>
-        <p class="lead show-m">The club encourages its members to take part in events and social activities that promote HOCC and its membership. Members are willing to support those in need, assist with charitable events and support our local schools and other community activities.</p>
-        <p class="show-m"><a href="about.html#purpose">Read more</a></p>
-        <p class="hide-m"><a href="about.html">Read about the club and meet the officers</a></p>
+        <p class="label" data-t="text.Home: Our purpose">Our purpose</p>
+        <h2 data-t="text.Home: Why the club exists">Why the club exists</h2>
+        <div id="purpose"></div>
       </div>
       <div>
-        <p class="label">Club officers</p>
-        <h2 class="hide-mobile">Who to look for</h2>
-        <ul class="officer-mini hide-mobile">
-          <li><strong>Dianne Dunbar</strong>, President</li>
-          <li><strong>David Finley</strong>, Vice President &amp; Founder</li>
-          <li><strong>Myra Finley</strong>, Treasurer &amp; Founder</li>
-          <li><strong>Carolyn Thompson</strong>, Member At Large</li>
-        </ul>
-        <p style="margin-top:.6rem"><a href="about.html#officers"><span class="show-m">Meet our 4 club officers</span><span class="hide-m">Read their full bios</span></a></p>
+        <p class="label" data-t="text.Home: Club officers">Club officers</p>
+        <h2 data-t="text.Home: Who to look for">Who to look for</h2>
+        <ul class="officer-mini" id="officer-mini"></ul>
+        <p style="margin-top:.6rem"><a href="about.html#officers">Meet our club officers</a></p>
       </div>
     </div>
   </section>
 
   <section class="band">
     <div class="wrap">
-      <p class="label">On the calendar</p>
-      <h2>Coming up</h2>
-      <ul class="events" data-list="home">
-        <li class="event" data-end="2026-10-25">
-          <div class="date"><span class="m">Oct</span><span class="d">23&ndash;25</span></div>
-          <div><h3>HOCC's Annual Fall Foliage Corvette Cruise Adventure</h3><p>Cherokee Casino &amp; Hotel Roland, 109 Cherokee Blvd, Roland, OK 74954 &middot; 9 am</p></div>
-        </li>
-        <li class="event" data-end="2026-11-03">
-          <div class="date"><span class="m">Nov</span><span class="d">3</span></div>
-          <div><h3>HOCC Board Meeting</h3><p>Van's Pig Stand, 1991 Tower Dr, Moore, OK 73160 &middot; 6:00 pm &ndash; 8:00 pm</p></div>
-        </li>
-        <li class="event over-m" data-end="2026-11-04">
-          <div class="date"><span class="m">Nov</span><span class="d">4</span></div>
-          <div><h3>HOCC Ladies Night Out Dinner</h3><p>BJ's Restaurant &amp; Brewhouse, 330 Ed Noble Pkwy, Norman, OK 73072 &middot; 7:00 pm &ndash; 9:00 pm</p></div>
-        </li>
-        <li class="event over" data-end="2026-11-11">
-          <div class="date"><span class="m">Nov</span><span class="d">11</span></div>
-          <div><h3>Midwest City Veterans Day Parade</h3><p>Midwest City, OK &middot; 8:00 am &ndash; 3:30 pm</p></div>
-        </li>
-        <li class="event over" data-end="2026-11-21">
-          <div class="date"><span class="m">Nov</span><span class="d">21</span></div>
-          <div><h3>HOCC November Membership Meeting</h3><p>Yellow Rose Dinner Theater, 1005 SW 4th St, Moore, OK &middot; 1:00 pm &ndash; 3:00 pm</p></div>
-        </li>
-        <li class="event over" data-end="2026-12-12">
-          <div class="date"><span class="m">Dec</span><span class="d">12</span></div>
-          <div><h3>HOCC Christmas Party</h3><p>South Lakes Event Center, 4302 SW 119th St, OKC, OK 73173 &middot; 5:00 pm &ndash; 8:00 pm</p></div>
-        </li>
-      </ul>
-      <p class="no-events" id="no-events" hidden>No upcoming events listed. Check back soon or email <a href="mailto:hoccclub@gmail.com">hoccclub@gmail.com</a></p>
-      <p><a class="btn dark" href="events.html">All upcoming events</a></p>
+      <p class="label" data-t="text.Home: From our car show">From our car show</p>
+      <h2 class="hand-h" id="home-photos-title">A few photos</h2>
+      <div id="home-photos"></div>
+      <p style="margin-top:1rem"><a class="btn dark" href="gallery.html" data-t="text.Home: See all photos">See all photos</a></p>
     </div>
   </section>
 
-  <section>
-    <div class="wrap">
-      <p class="label">From our car show</p>
-      <h2>A few photos</h2>
-      <ul class="grid">
-        <li><a href="images/91def16d-CS-10.jpg"><img src="images/91def16d-CS-10.jpg" alt="Blue Corvette with its hood up at the club car show" loading="lazy"></a></li>
-        <li><a href="images/a513e608-CS-15.jpg"><img src="images/a513e608-CS-15.jpg" alt="Orange Corvette on display at the club car show" loading="lazy"></a></li>
-        <li><a href="images/1ba05a37-CS-27.jpg"><img src="images/1ba05a37-CS-27.jpg" alt="Red Corvette with hood raised at the club car show" loading="lazy"></a></li>
-        <li><a href="images/810afc99-CS-41.jpg"><img src="images/810afc99-CS-41.jpg" alt="Corvettes on display at the club car show" loading="lazy"></a></li>
-      </ul>
-      <p style="margin-top:1.25rem"><a class="btn dark" href="gallery.html">See all photos</a></p>
-    </div>
-  </section>
+  <section id="nm-sec"><div class="wrap" id="home-new-members" hidden></div></section>
 
-  <section class="band-dark hide-mobile">
+  <section class="band-dark">
     <div class="wrap two">
       <div>
-        <h2>Join the club</h2>
-        <p>Dues are $40 for a single membership and $50 for a family membership. Three short steps: fill in your information, pay securely, and you are done.</p>
-        <p><a class="btn gold" href="membership.html">Join / Renew Membership</a></p>
-      </div>
-      <div>
-        <h2>Giving back</h2>
-        <p>The club supports Autism Oklahoma and the Sgt. Miles Tarron Foundation of McAlester.</p>
+        <h2 data-t="text.Home: Giving back">Giving back</h2>
+        <p id="home-giving"></p>
         <p><a href="charities.html">Our charities and sponsors</a></p>
       </div>
+      <div class="join-quiet">
+        <h2 data-t="text.Home: Join the club">Join the club</h2>
+        <p id="home-join"></p>
+        <p><a href="membership.html">Membership information</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sponsor-strip">
+    <div class="wrap">
+      <p class="label" data-t="text.Home: With thanks">With thanks</p>
+      <h2 data-t="text.Home: Our sponsors">Our sponsors</h2>
+      <div id="home-sponsors"></div>
     </div>
   </section>
 </main>
@@ -138,25 +105,25 @@
     <div class="foot-grid">
       <div>
         <h2>Heart of Oklahoma Corvette Club</h2>
-        <p>Email: <a href="mailto:hoccclub@gmail.com">hoccclub@gmail.com</a></p>
-        <address>17118 N. County Rd. 3197<br>Pauls Valley, OK 73075</address>
-        <p><a href="https://www.facebook.com/groups/1453977328508756">Our Facebook group</a></p>
+        <p>Email: <a href="mailto:hoccclub@gmail.com" data-mail="settings.email">hoccclub@gmail.com</a></p>
+        <p data-phone hidden>Phone: <a href="#"></a></p>
+        <address data-t="settings.address">17118 N. County Rd. 3197<br>Pauls Valley, OK 73075</address>
+        <p><a href="https://www.facebook.com/groups/1453977328508756" data-href="settings.facebook" data-hide-empty>Our Facebook group</a></p>
       </div>
       <div>
         <h2>More</h2>
         <ul class="foot-links">
-          <li><a href="membership.html">Join / Renew Membership</a></li>
+          <li><a href="membership.html">Membership</a></li>
           <li><a href="charities.html">Charities &amp; Sponsors</a></li>
-          <li><a href="car-show-2026.html">2026 Car Show</a></li>
           <li><a href="for-sale.html">For Sale</a></li>
+          <li><a href="apparel.html">Apparel</a></li>
         </ul>
       </div>
     </div>
-    <p class="fine">Incorporated in Oklahoma as a Not For Profit Corporation on June 12, 2023. 501(c)(3). EIN 93-1833147. This is a preview redesign and is not yet the official club website.</p>
+    <p class="fine"><span data-t="settings.footerFine">Incorporated in Oklahoma as a Not For Profit Corporation on June 12, 2023. 501(c)(3). EIN 93-1833147.</span> <a class="admin-link" href="admin/">Club admin</a></p>
   </div>
 </footer>
-<a class="join-bar" href="membership.html">Join / Renew Membership</a>
-<script src="events.js" defer></script>
-<script src="tour.js" defer></script> <!-- PREVIEW TOUR: remove before launch -->
+<noscript><p class="load-error">This website needs JavaScript turned on. You can always email the club at hoccclub@gmail.com.</p></noscript>
+<script src="site.js" defer></script>
 </body>
 </html>

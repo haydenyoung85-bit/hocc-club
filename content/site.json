@@ -1,0 +1,896 @@
+{
+ "settings": {
+  "clubName": "Heart of Oklahoma Corvette Club",
+  "shortName": "HOCC",
+  "logo": "images/1b97d2c0-HOCC-Logo.png",
+  "email": "hoccclub@gmail.com",
+  "phone": "",
+  "address": "17118 N. County Rd. 3197\nPauls Valley, OK 73075",
+  "facebook": "https://www.facebook.com/groups/1453977328508756",
+  "headerButtonText": "2027 Car Show",
+  "headerButtonShort": "Car Show",
+  "headerButtonLink": "car-show.html",
+  "footerFine": "Incorporated in Oklahoma as a Not For Profit Corporation on June 12, 2023. 501(c)(3). EIN 93-1833147.",
+  "donateLink": "https://www.paypal.com/donate/?hosted_button_id=ZUZLJXYLXD4ZE",
+  "helpName": "Hayden",
+  "helpPhone": ""
+ },
+ "home": {
+  "heroEyebrow": "Oklahoma Corvette club · Not-For-Profit · 501(c)(3)",
+  "heroTitle": "Corvette people, good company, and a hand for those in need.",
+  "heroText": "We are a club of Corvette owners who take part in events and social activities together, and who are willing to support those in need, assist with charitable events and support our local schools and other community activities.",
+  "heroImage": "images/42bc1aed-CS-1.jpg",
+  "heroButtonText": "Car Show info",
+  "heroButtonLink": "car-show.html",
+  "heroButton2Text": "Upcoming events",
+  "heroButton2Link": "events.html",
+  "photosTitle": "A few photos",
+  "photos": [
+   {
+    "image": "images/91def16d-CS-10.jpg",
+    "caption": ""
+   },
+   {
+    "image": "images/a513e608-CS-15.jpg",
+    "caption": ""
+   },
+   {
+    "image": "images/1ba05a37-CS-27.jpg",
+    "caption": ""
+   },
+   {
+    "image": "images/810afc99-CS-41.jpg",
+    "caption": ""
+   }
+  ],
+  "joinText": "New to the club? Single membership is $40 and family membership is $50.",
+  "givingText": "The club supports Autism Oklahoma and the Sgt. Miles Tarron Foundation of McAlester."
+ },
+ "about": {
+  "purpose": "The purpose of the Heart of Oklahoma Corvette Club (HOCC) is to encourage participation of the club members in events and social activities that promote HOCC and its membership. The members of HOCC are willing to support those in need, assist with charitable events and support our local schools and other community activities.",
+  "photo": "images/b98f7c88-1st-club-meeting-4.jpg",
+  "photoCaption": "The first club meeting.",
+  "officers": [
+   {
+    "name": "Dianne Dunbar",
+    "role": "President",
+    "photo": "images/0f66eeb4-Dianne-2.jpeg",
+    "bio": "Dianne is retired. She is a Veteran of the US Air Force. She has worn many different hats during her career; she is most proud of her work as a private caregiver for the last 15 years. She is thrilled to have found her Corvette family with the Heart of Oklahoma Corvette Club and learning more about her car.",
+    "show": true
+   },
+   {
+    "name": "David Finley",
+    "role": "Vice President & Founder",
+    "photo": "images/2134be6e-David-Finley.jpg",
+    "bio": "David currently works for the USDA - NRCS. David’s service is as a Quality Assurance Inspector for the rehabilitation of flood control dams. David’s hobbies include woodworking and diy projects. David enjoys being a part of the Corvette community and hanging out with his Corvette family of friends.",
+    "show": true
+   },
+   {
+    "name": "Myra Finley",
+    "role": "Treasurer & Founder",
+    "photo": "images/22e0c5cb-Myra-Finley-v2.jpg",
+    "bio": "Myra has been married to David for 30+ years and is retired. Myra has over 40 years in the accounting industry. Myra enjoys crafts and diy projects. Myra loves her Corvette and Corvette family.",
+    "show": true
+   },
+   {
+    "name": "Carolyn Thompson",
+    "role": "Member At Large",
+    "photo": "images/1f68d82e-Carolyn-Thompson.png",
+    "bio": "Carolyn retired from a non-profit after 17 years as a contractor at Tinker Air Force Base. Loves all corvettes but has a special place in her heart for C3’s. Enjoys flowers, woodworking and grandkids.",
+    "show": true
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Where does the club meet?",
+    "a": "Sonny’s Café, 2406 Weeden Blvd, Purcell, OK 73080, (405) 527-0640; and Yellow Rose Dinner Theater, 1005 SW 4th St, Moore, OK 73160. See the events page for dates.",
+    "show": true
+   },
+   {
+    "q": "Do I need to be a member to attend events?",
+    "a": "In club sponsored events membership is required.",
+    "show": true
+   },
+   {
+    "q": "Is HOCC a non-profit?",
+    "a": "Yes. HOCC is incorporated in the State of Oklahoma as a Not For Profit Corporation. HOCC was incorporated on June 12th, 2023.",
+    "show": true
+   },
+   {
+    "q": "Is HOCC a 501(c)(3)?",
+    "a": "Yes. HOCC EIN: 93-1833147",
+    "show": true
+   }
+  ]
+ },
+ "newMembers": {
+  "title": "Welcome, new members",
+  "intro": "",
+  "items": []
+ },
+ "events": {
+  "intro": "Membership is required for club sponsored events. Past events disappear by themselves.",
+  "items": [
+   {
+    "title": "HOCC's Annual Fall Foliage Corvette Cruise Adventure",
+    "start": "2026-10-23",
+    "end": "2026-10-25",
+    "time": "9 am",
+    "place": "Cherokee Casino & Hotel Roland",
+    "address": "109 Cherokee Blvd, Roland, OK 74954",
+    "details": "",
+    "show": true
+   },
+   {
+    "title": "HOCC Board Meeting",
+    "start": "2026-11-03",
+    "end": "",
+    "time": "6:00 pm – 8:00 pm",
+    "place": "Van's Pig Stand",
+    "address": "1991 Tower Dr, Moore, OK 73160",
+    "details": "",
+    "show": true
+   },
+   {
+    "title": "HOCC Ladies Night Out Dinner",
+    "start": "2026-11-04",
+    "end": "",
+    "time": "7:00 pm – 9:00 pm",
+    "place": "BJ's Restaurant & Brewhouse",
+    "address": "330 Ed Noble Pkwy, Norman, OK 73072",
+    "details": "",
+    "show": true
+   },
+   {
+    "title": "Midwest City Veterans Day Parade",
+    "start": "2026-11-11",
+    "end": "",
+    "time": "8:00 am – 3:30 pm",
+    "place": "Midwest City, OK",
+    "address": "",
+    "details": "",
+    "show": true
+   },
+   {
+    "title": "HOCC November Membership Meeting",
+    "start": "2026-11-21",
+    "end": "",
+    "time": "1:00 pm – 3:00 pm",
+    "place": "Yellow Rose Dinner Theater",
+    "address": "1005 SW 4th St, Moore, OK",
+    "details": "",
+    "show": true
+   },
+   {
+    "title": "HOCC Christmas Party",
+    "start": "2026-12-12",
+    "end": "",
+    "time": "5:00 pm – 8:00 pm",
+    "place": "South Lakes Event Center",
+    "address": "4302 SW 119th St, OKC, OK 73173",
+    "details": "",
+    "show": true
+   }
+  ],
+  "meetings": [
+   {
+    "name": "Sonny's Café",
+    "address": "2406 Weeden Blvd\nPurcell, OK 73080",
+    "phone": "(405) 527-0640"
+   },
+   {
+    "name": "Yellow Rose Dinner Theater",
+    "address": "1005 SW 4th St\nMoore, OK 73160",
+    "phone": ""
+   }
+  ]
+ },
+ "carShow": {
+  "label": "Past event · Sold out",
+  "title": "2026 Height of Summer Corvette Show",
+  "dates": "July 23–26, 2026",
+  "venue": "Southeast EXPO Center | 4500 West, 4500 US-270, McAlester, OK 74501",
+  "status": "SOLD OUT — Thank You! We’re excited to have a full house for this event!",
+  "highlights": "Friday’s Evening Meet & Greet Social\nFriday Fun Day - Planned Events\nSaturday’s Big Corvette Show Event\nShuttle Service Available",
+  "details": "Only 140 registration spaces available.\nRain or shine — no refunds.\nTotal classes offered: 16\nFirst through third place awards: 48\nTotal awards, including specialty and members choice: 80+\nRegistration was $50. Show shirts were $27.",
+  "image": "images/810e384a-hocc-show-shirt.jpg",
+  "imageCaption": "The show shirt.",
+  "openingNote": "",
+  "classes": [
+   {
+    "name": "Class A",
+    "desc": "C1 - 53 to 62"
+   },
+   {
+    "name": "Class B",
+    "desc": "C2 - 63 to 67"
+   },
+   {
+    "name": "Class C",
+    "desc": "C3 - 68 to 82"
+   },
+   {
+    "name": "Class D",
+    "desc": "C4 - 84 to 96"
+   },
+   {
+    "name": "Class E",
+    "desc": "C5 - 97 to 04 Conv / Coupe"
+   },
+   {
+    "name": "Class F",
+    "desc": "C5 - 01 to 04 FRC - Z06"
+   },
+   {
+    "name": "Class G",
+    "desc": "C6 - 05 to 13 NB"
+   },
+   {
+    "name": "Class H",
+    "desc": "C6 - 06 to 13 WB"
+   },
+   {
+    "name": "Class I",
+    "desc": "C7 - 14 to 19 Stingray Coupe/Conv"
+   },
+   {
+    "name": "Class J",
+    "desc": "C7 - 17 to 19 Grand Sport Coupe/Conv"
+   },
+   {
+    "name": "Class K",
+    "desc": "C7 - 15 to 19 Z06/ZR1 Coupe/Conv"
+   },
+   {
+    "name": "Class L",
+    "desc": "C8 - Stingray/Coupe"
+   },
+   {
+    "name": "Class M",
+    "desc": "C8 - Stingray/HTC"
+   },
+   {
+    "name": "Class N",
+    "desc": "C8 - Z06 / ERay / ZR1 / ZR1X Coupe"
+   },
+   {
+    "name": "Class O",
+    "desc": "C8 - Z06 / ERay / ZR1 / ZR1X HTC"
+   },
+   {
+    "name": "Class P",
+    "desc": "C1 - C8 Resto / Custom"
+   }
+  ],
+  "hotels": [
+   {
+    "name": "Hampton Inn",
+    "logo": "images/b4a90257-Screen-Shot-2026-02-15-at-12.50.37-PM.png",
+    "rate": "$105.00 + tax / night",
+    "code": "Group Code: HOS",
+    "phone": "(918) 302-3882 opt 0",
+    "notes": "Hotel is providing a water hose for guests",
+    "link": "https://www.hilton.com/en/attend-my-event/heightofsummercorvette/",
+    "qr": "images/1ba8bb97-Hamption-Inn---HOSCorvette_QR.png",
+    "show": true
+   },
+   {
+    "name": "Extended Stay America",
+    "logo": "images/8482978a-Screen-Shot-2026-02-15-at-12.45.55-PM.png",
+    "rate": "$88.00 - $99.00 + tax / night",
+    "code": "Group Code: 328329",
+    "phone": "(918) 426-4171",
+    "notes": "",
+    "link": "https://extendedstayamerica.com/corporate?corpcode=328329",
+    "qr": "images/c6e0df42-Screen-Shot-2026-02-15-at-1.03.28-PM.png",
+    "show": true
+   },
+   {
+    "name": "Holiday Inn Express & Suites",
+    "logo": "images/18d4020b-Screen-Shot-2026-02-15-at-12.43.32-PM.png",
+    "rate": "$129.00 + tax / night",
+    "code": "Block Code: COR",
+    "phone": "(918) 423-1118",
+    "notes": "",
+    "link": "https://www.ihg.com/redirect?path=rates&brandCode=EX&localeCode=en&regionCode=1&hotelCode=MLCPR&checkInDate=23&checkInMonthYear=062026&checkOutDate=26&checkOutMonthYear=062026&_PMID=99801505&GPC=COR&cn=no&adjustMonth=false&showApp=true&monthIndex=00",
+    "qr": "images/90dac972-holidayinnexpress.png",
+    "show": true
+   }
+  ],
+  "camper": "RV accommodations at the Expo Center - $25/night\n30 & 50 amp hookups at the site\nWater/Bath House are available for Campers\nNo Dump station available.\nTo reserve call 539-995-0539 / 918-922-0700\nWash Station available at Expo",
+  "shuttle": "Hotel Shuttle Transportation Furnished by: Dream City Church (Tips proceeds go to Youth Summer Camp)\nShuttle runs every 20 mins\nThursday: 4pm - 7pm\nFriday: 9am - 7pm\nSaturday: 6am - 10pm",
+  "shuttleLink": "https://www.dreamcityok.church/",
+  "shuttleLogo": "images/68b2443b-Screen-Shot-2026-02-15-at-1.13.38-PM.png",
+  "qrCodes": [],
+  "partners": [
+   {
+    "image": "images/e4f16259-logo.png",
+    "name": "Southeast EXPO Center",
+    "link": ""
+   },
+   {
+    "image": "images/e9837f93-Untitled-design-10.png",
+    "name": "McAlester OK",
+    "link": ""
+   },
+   {
+    "image": "images/7ccca7e6-corvettes.png",
+    "name": "Corvettes",
+    "link": ""
+   }
+  ],
+  "benefitText": "Show proceeds benefit Autism Oklahoma and the Sgt. Miles Tarron Foundation."
+ },
+ "registration": {
+  "enabled": false,
+  "openDate": "2027-01-01",
+  "cap": 140,
+  "spotsLeft": 140,
+  "fee": "50",
+  "feeNote": "",
+  "dinnerPrice": "",
+  "shirtPrice": "",
+  "shirtSizes": "S, M, L, XL, 2XL, 3XL",
+  "shirtPopup": true,
+  "shirtImage": "images/810e384a-hocc-show-shirt.jpg",
+  "paypalLink": "",
+  "intro": "Fill in the form for each car you are entering. After you send it, you pay with PayPal.",
+  "waitlistText": "The show is full. Fill in the form to join the waiting list. We will contact you if a spot opens up.",
+  "terms": "Rain or shine — no refunds."
+ },
+ "apparel": {
+  "intro": "Show shirts and club gear.",
+  "items": [
+   {
+    "name": "2026 Height of Summer Show Shirt",
+    "image": "images/810e384a-hocc-show-shirt.jpg",
+    "price": "27",
+    "sizes": "S, M, L, XL, 2XL, 3XL",
+    "description": "",
+    "buyLink": "",
+    "show": true
+   }
+  ],
+  "drtTitle": "DRT Shop",
+  "drtText": "Order club apparel from the DRT online shop.",
+  "drtLink": ""
+ },
+ "forSale": {
+  "intro": "Corvette cars and parts for sale by club members and friends.",
+  "listings": [
+   {
+    "title": "C5 Inner Fender Covers",
+    "price": "$120.00/pair",
+    "description": "Shale/Oak Painted Fiberglass Inner Fender Covers. Can be repainted to match other colors. Current paint color will work with 2003 50th Anniversary Special Edition and 2004 Lemans Blue as the color matches interior color of these cars",
+    "photos": [
+     {
+      "image": "images/decd3454-Finleyforsale1.jpg"
+     },
+     {
+      "image": "images/16921434-image-asset.jpeg"
+     },
+     {
+      "image": "images/16921435-image-asset.jpeg"
+     }
+    ],
+    "contactName": "David Finley",
+    "phone": "405-630-6723",
+    "email": "",
+    "status": "approved",
+    "sold": true
+   }
+  ]
+ },
+ "sponsors": {
+  "intro": "With thanks to the businesses that support the club.",
+  "items": [
+   {
+    "name": "Sponsor",
+    "logo": "images/a22579c9-logo.png",
+    "link": "",
+    "darkBg": false,
+    "show": true
+   },
+   {
+    "name": "TCBG",
+    "logo": "images/ec508adc-TCBG_Logo-Address-white.png",
+    "link": "",
+    "darkBg": true,
+    "show": true
+   },
+   {
+    "name": "Sonny's Café",
+    "logo": "images/ef33d89c-Sonnys-Cafe.jpg",
+    "link": "",
+    "darkBg": false,
+    "show": true
+   },
+   {
+    "name": "Brewer Carpet One",
+    "logo": "images/9ff5c7dd-Brewer-One-Carpet-png.png",
+    "link": "",
+    "darkBg": false,
+    "show": true
+   },
+   {
+    "name": "Yellow Rose Dinner Theater",
+    "logo": "images/7b7154a2-Yellow-Rose-Dinner-Theater.jpg",
+    "link": "",
+    "darkBg": false,
+    "show": true
+   },
+   {
+    "name": "Abel Racing",
+    "logo": "images/f989cd9d-Abel-Racing.jpeg",
+    "link": "",
+    "darkBg": false,
+    "show": true
+   },
+   {
+    "name": "Punkins BBQ",
+    "logo": "images/ca9578c1-Punkins-Logo-1.jpg",
+    "link": "",
+    "darkBg": false,
+    "show": true
+   },
+   {
+    "name": "Knippelmier Chevrolet, Blanchard, Oklahoma",
+    "logo": "images/15beaf6d-Knippelmier-Round-Logo-Vector-1.jpg",
+    "link": "",
+    "darkBg": false,
+    "show": true
+   },
+   {
+    "name": "Love's",
+    "logo": "images/8ec5e189-LovesECHOwYELLOW.png",
+    "link": "",
+    "darkBg": false,
+    "show": true
+   },
+   {
+    "name": "Angel's Diner",
+    "logo": "images/841c75a7-Angel's-Diner-Logo.png",
+    "link": "",
+    "darkBg": false,
+    "show": true
+   },
+   {
+    "name": "Sam Wampler Freedom Ford",
+    "logo": "images/7eecf29b-Sam-Wampler-Freedom-Ford-Logo.jpg",
+    "link": "",
+    "darkBg": false,
+    "show": true
+   },
+   {
+    "name": "AAU",
+    "logo": "images/7f888ec8-AAU-Logo.jpg",
+    "link": "",
+    "darkBg": false,
+    "show": true
+   },
+   {
+    "name": "Komar Outlet",
+    "logo": "images/99fc8521-Komar-Outlet.jpg",
+    "link": "",
+    "darkBg": false,
+    "show": true
+   },
+   {
+    "name": "Aero Larri",
+    "logo": "images/a8b44622-New-inverted-Black-CLOSE-cropped--AEROLARRI-Logo-with-Squares-around.png",
+    "link": "",
+    "darkBg": true,
+    "show": true
+   },
+   {
+    "name": "Valley Body",
+    "logo": "images/174e683a-valley-body-logo-2.0.png",
+    "link": "",
+    "darkBg": false,
+    "show": true
+   },
+   {
+    "name": "Legacy Accounting CPA, PLLC",
+    "logo": "images/199613d2-Legcy-Accounting-CPA,-PLLC.jpg",
+    "link": "",
+    "darkBg": false,
+    "show": true
+   }
+  ],
+  "trailerPhoto": "images/2db7d26b-1000010066.jpg",
+  "trailerCaption": "The club trailer carries our annual sponsors."
+ },
+ "charities": {
+  "intro": "The members of HOCC are willing to support those in need, assist with charitable events and support our local schools and other community activities.",
+  "items": [
+   {
+    "name": "Autism Oklahoma",
+    "logo": "images/41d8273c-Autism-Okla.png",
+    "text": "AutismOklahoma had grassroots beginnings in 2002 when families began meeting together to help problem solve family challenges. We create opportunities and engage families to help their own family and a few more. Our programs are FREE or NEARLY FREE and are funded by donations. 95 cents of every dollar donated is used to fund programs in Oklahoma. 501(c)3",
+    "address": "7725 W Reno Ave\nOklahoma City, OK 73127\n(405) 355-2525",
+    "link": "",
+    "show": true
+   },
+   {
+    "name": "Sgt. Miles Tarron Foundation",
+    "logo": "images/68ee1f8b-Sgt-Miles-Tarron-Foundation-Logo.png",
+    "text": "The Sergeant Miles Tarron Foundation serves so many in their community of McAlester, OK. It all began when Reed Marcum realized some of his classmates didn’t have some of the basic things they needed for school. He started by filling bags with pencils, erasers and other school supplies. This project grew into filling backpacks with school supplies and giving them away to kids in the community. The next phase began with giving away hats and gloves to those that didn’t have any for the winter. This project grew into the largest community toy giveaway in the McAlester area. To date, they have given away over 70,000 toys and there is no sign of slowing down. The Foundation also has a side that honors Veterans with a Field of Honor that consist of flags (made in the USA) and tags for all the Veterans being honored. There is also a scholarship program for high school seniors that includes writing an essay about “What Veterans Mean to Me”. This amazing Foundation has such a tremendous impact in and around the McAlester community doing so many different things for those in need. These different projects began as simple 4-H ideas that were fueled by the passion of those that saw a need and followed their hearts.",
+    "address": "McAlester, OK",
+    "link": "",
+    "show": true
+   }
+  ]
+ },
+ "membership": {
+  "intro": "Single membership $40. Family membership $50.",
+  "singleLabel": "Single",
+  "singlePrice": "40",
+  "familyLabel": "Family",
+  "familyPrice": "50",
+  "renewNote": "Renewal invoices will be mailed to each club member the first of December each year.",
+  "payNote": "You do not need a PayPal account. You can pay with any credit or debit card.",
+  "paypalSingle": "",
+  "paypalFamily": "",
+  "checkText": "Download and print the application, then mail it with your check to:",
+  "applicationFile": "files/HOCC-Application.docx",
+  "photos": [
+   {
+    "image": "images/16905231-image-asset.jpeg"
+   },
+   {
+    "image": "images/16939796-image-asset.jpeg"
+   }
+  ]
+ },
+ "gallery": {
+  "intro": "Photos from the club car show.",
+  "photos": [
+   {
+    "image": "images/42bc1aed-CS-1.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/e4d06da4-CS-2.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/11b3936f-CS-4.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/eb6d5d34-CS-5.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/249bb2c6-CS-6.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/112fd8ff-CS-7.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/bf904c74-CS-8.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/d815aacb-CS-9.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/91def16d-CS-10.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/6ddcea1e-CS-11.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/34e38516-CS-12.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/8e747718-CS-13.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/c2896d94-CS-14.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/a513e608-CS-15.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/1c1faca5-CS-16.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/29aeaf60-CS-17.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/fb0eec06-CS-18.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/21f1ace5-CS-19.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/2a71b8e5-CS-20.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/71b3b257-CS-21.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/9aa3a1dc-CS-22.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/9502dca8-CS-23.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/ce13806a-CS-24.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/4a88973c-CS-25.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/43e6a2be-CS-26.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/1ba05a37-CS-27.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/094b264d-CS-28.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/a1709c0d-CS-29.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/69b3c61e-CS-30.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/f0feaeec-CS-31.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/aafb63b7-CS-32.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/80c63f4b-CS-33.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/18d601bd-CS-34.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/be3396cb-CS-35.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/8a7a0487-CS-36.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/aef90560-CS-37.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/f66562de-CS-38.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/4b893009-CS-39.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/e0833593-CS-40.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/810afc99-CS-41.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/ce53e1f7-CS-42.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/1607d893-CS-43.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/876c399d-CS-44.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/98332d52-CS-45.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/b45b48ad-CS-46.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/0a8c96e6-CS-47.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/d1384d50-CS-48.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/17853696-CS-49.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/f6df6110-CS-50.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/d2127643-CS-51.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/cd2d8cfb-CS-53.jpg",
+    "caption": "",
+    "show": true
+   },
+   {
+    "image": "images/f8bba247-CS-54.jpg",
+    "caption": "",
+    "show": true
+   }
+  ]
+ },
+ "contact": {
+  "intro": "We would love to hear from you.",
+  "formOn": true
+ },
+ "text": {
+  "Home: On the calendar": "On the calendar",
+  "Home: Coming up": "Coming up",
+  "Home: All upcoming events": "All upcoming events",
+  "Home: Our purpose": "Our purpose",
+  "Home: Why the club exists": "Why the club exists",
+  "Home: Club officers": "Club officers",
+  "Home: Who to look for": "Who to look for",
+  "Home: From our car show": "From our car show",
+  "Home: See all photos": "See all photos",
+  "Home: Giving back": "Giving back",
+  "Home: Join the club": "Join the club",
+  "Home: With thanks": "With thanks",
+  "Home: Our sponsors": "Our sponsors",
+  "About: About the club": "About the club",
+  "About: About & Officers": "About & Officers",
+  "About: Our purpose": "Our purpose",
+  "About: Leadership": "Leadership",
+  "About: Good to know": "Good to know",
+  "About: Frequently Asked Questions": "Frequently Asked Questions",
+  "Events: On the calendar": "On the calendar",
+  "Events: Upcoming Events": "Upcoming Events",
+  "Events: Where we meet": "Where we meet",
+  "Events: Meeting Locations": "Meeting Locations",
+  "Photos: Photos": "Photos",
+  "Photos: Club Photos": "Club Photos",
+  "Car Show: Show details": "Show details",
+  "Car Show: Where to stay": "Where to stay",
+  "Car Show: Hotels & lodging": "Hotels & lodging",
+  "Car Show: QR codes": "QR codes",
+  "Car Show: Camper information": "Camper information",
+  "Car Show: Hotel shuttle": "Hotel shuttle",
+  "Car Show: Show classes": "Show classes",
+  "Apparel: Club store": "Club store",
+  "Apparel: Apparel": "Apparel",
+  "For Sale: Member classifieds": "Member classifieds",
+  "For Sale: For Sale": "For Sale",
+  "For Sale: Sell your Corvette or parts": "Sell your Corvette or parts",
+  "For Sale: The club reviews every listing before it goes on the website": "The club reviews every listing before it goes on the website.",
+  "For Sale: About you": "About you",
+  "For Sale: What are you selling?": "What are you selling?",
+  "For Sale: Keep photos under 5 MB in total You can also email more phot": "Keep photos under 5 MB in total. You can also email more photos to the club.",
+  "For Sale: Send my listing to the club": "Send my listing to the club",
+  "Charities: Community": "Community",
+  "Charities: Charities & Sponsors": "Charities & Sponsors",
+  "Charities: Our Charities": "Our Charities",
+  "Charities: With thanks": "With thanks",
+  "Charities: Our Sponsors": "Our Sponsors",
+  "Contact: Get in touch": "Get in touch",
+  "Contact: Contact": "Contact",
+  "Contact: Email": "Email",
+  "Contact: Phone": "Phone",
+  "Contact: Mailing address": "Mailing address",
+  "Contact: Send us a message": "Send us a message",
+  "Contact: Send message": "Send message",
+  "Membership: Membership": "Membership",
+  "Membership: Join / Renew Membership": "Join / Renew Membership",
+  "Membership: Fill in your information": "Fill in your information",
+  "Membership: Are you new or renewing?": "Are you new or renewing?",
+  "Membership: Which membership?": "Which membership?",
+  "Membership: About you": "About you",
+  "Membership: Your Corvette": "Your Corvette",
+  "Membership: Send my information": "Send my information",
+  "Membership: Pay your dues": "Pay your dues",
+  "Membership: Pay by check": "Pay by check",
+  "Membership: Download the application (Word file)": "Download the application (Word file)",
+  "Thank-you page (membership): Step 1 is finished": "Step 1 is finished",
+  "Thank-you page (membership): Thank you Now please pay your dues": "Thank you. Now please pay your dues.",
+  "Thank-you page (membership): Pay by check": "Pay by check",
+  "Thank-you page (membership): Download the application (Word file)": "Download the application (Word file)",
+  "Thank-you page (membership): Back to the home page": "Back to the home page",
+  "Thank-you page (for sale): For Sale": "For Sale",
+  "Thank-you page (for sale): Thank you! Your listing was sent": "Thank you! Your listing was sent.",
+  "Thank-you page (for sale): The club will look it over Once it is appro": "The club will look it over. Once it is approved, it will show on the For Sale page.",
+  "Thank-you page (for sale): Back to For Sale": "Back to For Sale",
+  "Thank-you page (contact): Contact": "Contact",
+  "Thank-you page (contact): Thank you! Your message was sent": "Thank you! Your message was sent.",
+  "Thank-you page (contact): Someone from the club will get back to you": "Someone from the club will get back to you.",
+  "Thank-you page (contact): Back to the home page": "Back to the home page",
+  "Thank-you page (registration): Car show": "Car show",
+  "Thank-you page (registration): Back to the car show page": "Back to the car show page"
+ }
+}

@@ -3,55 +3,60 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>For Sale - Heart of Oklahoma Corvette Club</title>
+<title>For Sale | Heart of Oklahoma Corvette Club</title>
+<meta name="description" content="Heart of Oklahoma Corvette Club (HOCC): a not-for-profit Oklahoma Corvette club. Events, the Height of Summer Corvette Show, photos, for sale listings and membership.">
+<meta property="og:title" content="For Sale | Heart of Oklahoma Corvette Club">
+<meta property="og:description" content="Heart of Oklahoma Corvette Club (HOCC): a not-for-profit Oklahoma Corvette club. Events, the Height of Summer Corvette Show, photos, for sale listings and membership.">
+<meta property="og:image" content="images/42bc1aed-CS-1.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="images/1b97d2c0-HOCC-Logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="tour.css"> <!-- PREVIEW TOUR: remove before launch -->
 </head>
-<body>
+<body data-page="for-sale">
 <a class="skip" href="#main">Skip to main content</a>
 <header class="site-header">
   <div class="wrap header-top">
     <a class="brand" href="index.html"><img src="images/1b97d2c0-HOCC-Logo.png" alt="Heart of Oklahoma Corvette Club logo"><span>Heart of Oklahoma Corvette Club</span></a>
-    <a class="join-btn" href="membership.html"><span class="l-full">Register / Renew</span><span class="l-short">Register</span></a>
-    <details class="menu"><summary>Menu</summary><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About &amp; Officers</a></li><li><a href="events.html">Events</a></li><li><a href="gallery.html">Photos</a></li><li><a href="contact.html">Contact</a></li></ul></details>
+    <a class="join-btn" href="car-show.html" data-href="settings.headerButtonLink"><span class="l-full" data-t="settings.headerButtonText">2027 Car Show</span><span class="l-short" data-t="settings.headerButtonShort">Car Show</span></a>
+    <details class="menu"><summary>Menu</summary><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="events.html">Events</a></li><li><a href="car-show.html">Car Show</a></li><li><a href="gallery.html">Photos</a></li><li><a href="for-sale.html" aria-current="page">For Sale</a></li><li><a href="apparel.html">Apparel</a></li><li><a href="contact.html">Contact</a></li><li><a href="membership.html">Membership</a></li><li><a href="charities.html">Charities & Sponsors</a></li></ul></details>
   </div>
-  <nav class="nav" aria-label="Main">
-    <div class="wrap"><ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About &amp; Officers</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li><a href="gallery.html">Photos</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul></div>
-  </nav>
+  <nav class="nav" aria-label="Main"><div class="wrap"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="events.html">Events</a></li><li><a href="car-show.html">Car Show</a></li><li><a href="gallery.html">Photos</a></li><li><a href="for-sale.html" aria-current="page">For Sale</a></li><li><a href="apparel.html">Apparel</a></li><li><a href="contact.html">Contact</a></li></ul></div></nav>
 </header>
 
 <main id="main">
-  <div class="page-title"><div class="wrap">
-    <p class="label">Member classifieds</p>
-    <h1>For Sale</h1>
-  </div></div>
+<div class="page-title"><div class="wrap"><p class="label" data-t="text.For Sale: Member classifieds">Member classifieds</p><h1 data-t="text.For Sale: For Sale">For Sale</h1><p id="fs-intro"></p></div></div>
 
-  <section>
-    <div class="wrap two">
-      <div>
-        <h2>C5 Inner Fender Covers <span class="tag">Sold</span></h2>
-        <p>Shale/Oak Painted Fiberglass Inner Fender Covers. Can be repainted to match other colors. Current paint color will work with 2003 50th Anniversary Special Edition and 2004 Lemans Blue as the color matches interior color of these cars</p>
-        <p>Asking $120.00/pair.</p>
-        <p>Contact David Finley at <a href="tel:+14056306723">405-630-6723</a></p>
-        <!-- TODO: the original page marked this item SOLD and had two empty placeholder listings ("Contact name and info here"). Club to add real listings or remove. -->
-        <p class="todo">The original page had two empty placeholder listings. Club to supply real listings or leave them off.</p>
-      </div>
-      <div>
-        <img src="images/decd3454-Finleyforsale1.jpg" alt="Painted fiberglass inner fender covers for sale" loading="lazy">
-      </div>
+  <section><div class="wrap" id="listings"></div></section>
+  <section class="band" id="sell">
+    <div class="wrap narrow">
+      <h2 data-t="text.For Sale: Sell your Corvette or parts">Sell your Corvette or parts</h2>
+      <p class="big-note" data-t="text.For Sale: The club reviews every listing before it goes on the website">The club reviews every listing before it goes on the website.</p>
+      <form id="sell-form" method="POST" enctype="multipart/form-data" action="https://formsubmit.co/hoccclub@gmail.com">
+        <input type="hidden" name="_subject" value="For Sale submission (website)">
+        <input type="hidden" name="_captcha" value="true"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value=""><input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <fieldset><legend data-t="text.For Sale: About you">About you</legend>
+          <div class="field"><label for="s-name">Your name</label><input id="s-name" name="name" type="text" autocomplete="name" required></div>
+          <div class="row">
+            <div class="field"><label for="s-phone">Phone</label><input id="s-phone" name="phone" type="tel" autocomplete="tel" required></div>
+            <div class="field"><label for="s-email">Email</label><input id="s-email" name="email" type="email" autocomplete="email" required></div>
+          </div>
+        </fieldset>
+        <fieldset><legend data-t="text.For Sale: What are you selling?">What are you selling?</legend>
+          <div class="field"><label for="s-title">Title <span class="opt">(e.g. 1999 C5 Coupe, or C5 fender covers)</span></label><input id="s-title" name="title" type="text" required></div>
+          <div class="field"><label for="s-price">Asking price</label><input id="s-price" name="price" type="text" required></div>
+          <div class="field"><label for="s-desc">Description</label><textarea id="s-desc" name="description" rows="5" required></textarea></div>
+          <div class="field"><label for="s-photo1">Photo 1</label><input id="s-photo1" name="attachment" type="file" accept="image/*"></div>
+          <div class="field"><label for="s-photo2">Photo 2 <span class="opt">(optional)</span></label><input id="s-photo2" name="attachment2" type="file" accept="image/*"></div>
+          <div class="field"><label for="s-photo3">Photo 3 <span class="opt">(optional)</span></label><input id="s-photo3" name="attachment3" type="file" accept="image/*"></div>
+          <p class="fine-print" data-t="text.For Sale: Keep photos under 5 MB in total You can also email more phot">Keep photos under 5 MB in total. You can also email more photos to the club.</p>
+        </fieldset>
+        <button class="btn gold big" type="submit" data-t="text.For Sale: Send my listing to the club">Send my listing to the club</button>
+      </form>
     </div>
   </section>
-<section><div class="wrap"><ul class="grid"><li><img src="images/16921434-image-asset.jpeg" alt="Photo from the original For Sale page" loading="lazy"></li><li><img src="images/16921435-image-asset.jpeg" alt="Photo from the original For Sale page" loading="lazy"></li></ul></div></section>
 </main>
 
 <footer class="site-footer">
@@ -59,24 +64,25 @@
     <div class="foot-grid">
       <div>
         <h2>Heart of Oklahoma Corvette Club</h2>
-        <p>Email: <a href="mailto:hoccclub@gmail.com">hoccclub@gmail.com</a></p>
-        <address>17118 N. County Rd. 3197<br>Pauls Valley, OK 73075</address>
-        <p><a href="https://www.facebook.com/groups/1453977328508756">Our Facebook group</a></p>
+        <p>Email: <a href="mailto:hoccclub@gmail.com" data-mail="settings.email">hoccclub@gmail.com</a></p>
+        <p data-phone hidden>Phone: <a href="#"></a></p>
+        <address data-t="settings.address">17118 N. County Rd. 3197<br>Pauls Valley, OK 73075</address>
+        <p><a href="https://www.facebook.com/groups/1453977328508756" data-href="settings.facebook" data-hide-empty>Our Facebook group</a></p>
       </div>
       <div>
         <h2>More</h2>
         <ul class="foot-links">
-          <li><a href="membership.html">Join / Renew Membership</a></li>
+          <li><a href="membership.html">Membership</a></li>
           <li><a href="charities.html">Charities &amp; Sponsors</a></li>
-          <li><a href="car-show-2026.html">2026 Car Show</a></li>
           <li><a href="for-sale.html">For Sale</a></li>
+          <li><a href="apparel.html">Apparel</a></li>
         </ul>
       </div>
     </div>
-    <p class="fine">Incorporated in Oklahoma as a Not For Profit Corporation on June 12, 2023. 501(c)(3). EIN 93-1833147. This is a preview redesign and is not yet the official club website.</p>
+    <p class="fine"><span data-t="settings.footerFine">Incorporated in Oklahoma as a Not For Profit Corporation on June 12, 2023. 501(c)(3). EIN 93-1833147.</span> <a class="admin-link" href="admin/">Club admin</a></p>
   </div>
 </footer>
-<a class="join-bar" href="membership.html">Join / Renew Membership</a>
-<script src="tour.js" defer></script> <!-- PREVIEW TOUR: remove before launch -->
+<noscript><p class="load-error">This website needs JavaScript turned on. You can always email the club at hoccclub@gmail.com.</p></noscript>
+<script src="site.js" defer></script>
 </body>
 </html>
