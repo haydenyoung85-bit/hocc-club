@@ -389,6 +389,21 @@
     "email": "",
     "status": "approved",
     "sold": true
+   },
+   {
+    "title": "TEST 1999 C5 Coupe",
+    "price": "$9,999",
+    "description": "Test listing from the admin panel.",
+    "photos": [
+     {
+      "image": "images/uploads/20261123-lqsipv-test-photo.jpg"
+     }
+    ],
+    "contactName": "",
+    "phone": "",
+    "email": "",
+    "status": "approved",
+    "sold": false
    }
   ]
  },
