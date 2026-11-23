@@ -213,7 +213,7 @@ address { font-style: normal; }
 .foot-links a { display: inline-block; padding: .35rem 0; min-height: 40px; }
 .fine { border-top: 1px solid rgba(255, 255, 255, .3); margin-top: 1.75rem; padding-top: 1rem; font-size: .95rem; color: #fff; }
 
-@media (max-width: 1050px) {
+@media (max-width: 1360px) {
   .nav { order: 4; flex-basis: 100%; margin-left: 0; }
   .nav ul { flex-wrap: wrap; }
   .join-btn { margin-left: auto; }
@@ -466,4 +466,8 @@ input[type=file] { font: inherit; width: 100%; padding: .6rem; border: 2px dashe
   .hotel h3 { font-size: 1.05rem; }
   .check > summary { min-height: 52px; }
   details.check:not([open]) { margin-bottom: .6rem; }
+}
+@media (min-width: 701px) and (max-width: 1360px) {
+  .nav ul { gap: .1rem; }
+  .nav a { padding: 0 .75rem; }
 }
