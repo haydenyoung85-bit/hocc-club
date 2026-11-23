@@ -170,6 +170,17 @@
     "address": "4302 SW 119th St, OKC, OK 73173",
     "details": "",
     "show": true
+   },
+   {
+    "title": "TEST Admin event",
+    "start": "2026-12-30",
+    "end": "",
+    "time": "6:00 pm",
+    "place": "",
+    "address": "",
+    "details": "",
+    "photo": "",
+    "show": true
    }
   ],
   "meetings": [
