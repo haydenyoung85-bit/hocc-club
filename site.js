@@ -147,7 +147,7 @@
     fill('#hero-title', esc(h.heroTitle));
     fill('#hero-text', esc(h.heroText));
     var hi = $('#hero-img'); if (hi && h.heroImage) hi.src = safeUrl(h.heroImage);
-    var b1 = $('#hero-b1'); if (b1) { b1.textContent = h.heroButtonText || 'Car Show info'; b1.href = safeUrl(h.heroButtonLink) || 'car-show.html'; }
+    var b1 = $('#hero-b1'); if (b1) { b1.textContent = h.heroButtonText || 'REGISTER'; b1.href = safeUrl(h.heroButtonLink) || 'car-show.html'; }
     var b2 = $('#hero-b2'); if (b2) { if (h.heroButton2Text) { b2.textContent = h.heroButton2Text; b2.href = safeUrl(h.heroButton2Link) || 'events.html'; } else b2.hidden = true; }
     var p = D.about.purpose || '';
     fill('#purpose', moreText('<p class="lead">' + esc(p) + '</p>', 'more-purpose'));
@@ -215,11 +215,11 @@
     fill('#m-paynote', esc(m.payNote));
     document.querySelectorAll('[data-plan="single"]').forEach(function (el) { el.value = (m.singleLabel || 'Single') + ' ' + money(m.singlePrice); });
     document.querySelectorAll('[data-plan="family"]').forEach(function (el) { el.value = (m.familyLabel || 'Family') + ' ' + money(m.familyPrice); });
-    fill('#plan-single-label', esc(m.singleLabel) + ' &mdash; ' + esc(money(m.singlePrice)));
-    fill('#plan-family-label', esc(m.familyLabel) + ' &mdash; ' + esc(money(m.familyPrice)));
+    fill('#plan-single-label', esc(m.singleLabel) + ': ' + esc(money(m.singlePrice)));
+    fill('#plan-family-label', esc(m.familyLabel) + ': ' + esc(money(m.familyPrice)));
     var pays = [];
-    if (safeUrl(m.paypalSingle)) pays.push('<a class="btn" href="' + esc(safeUrl(m.paypalSingle)) + '">Pay ' + esc(m.singleLabel) + ' Membership &mdash; ' + esc(money(m.singlePrice)) + '</a>');
-    if (safeUrl(m.paypalFamily)) pays.push('<a class="btn" href="' + esc(safeUrl(m.paypalFamily)) + '">Pay ' + esc(m.familyLabel) + ' Membership &mdash; ' + esc(money(m.familyPrice)) + '</a>');
+    if (safeUrl(m.paypalSingle)) pays.push('<a class="btn" href="' + esc(safeUrl(m.paypalSingle)) + '">Pay ' + esc(m.singleLabel) + ' Membership, ' + esc(money(m.singlePrice)) + '</a>');
+    if (safeUrl(m.paypalFamily)) pays.push('<a class="btn" href="' + esc(safeUrl(m.paypalFamily)) + '">Pay ' + esc(m.familyLabel) + ' Membership, ' + esc(money(m.familyPrice)) + '</a>');
     document.querySelectorAll('.pay-buttons').forEach(function (el) { el.innerHTML = pays.join(''); el.hidden = !pays.length; });
     document.querySelectorAll('.pay-online').forEach(function (el) { el.hidden = !pays.length; });
     document.querySelectorAll('.check-text').forEach(function (el) { el.textContent = m.checkText || ''; });

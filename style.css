@@ -16,7 +16,7 @@
   --radius: 10px;
   --shadow: 0 2px 4px rgba(11, 27, 63, .06), 0 8px 24px rgba(11, 27, 63, .08);
   --flag: linear-gradient(90deg, #C8102E 0 33.3%, #fff 33.3% 66.6%, #0A2463 66.6% 100%);
-  --sans: "Plus Jakarta Sans", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  --sans: "Libre Franklin", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -331,13 +331,13 @@ textarea { resize: vertical; min-height: 120px; }
 input[type=file] { font: inherit; width: 100%; padding: .6rem; border: 2px dashed #6b7a8d; border-radius: var(--radius); background: #fff; }
 .hand-h { position: relative; display: inline-block; isolation: isolate; }
 .hand-h::after { content: ""; position: absolute; left: 0; right: -.3em; bottom: -.18em; height: .32em; background: var(--gold); opacity: .3; border-radius: 40% 60% 55% 45% / 60% 40% 60% 40%; z-index: -1; transform: rotate(-1.2deg); }
-.label { font-family: "Caveat", cursive; font-size: 1.45rem; font-weight: 700; color: var(--coral); letter-spacing: .01em; }
+.label { font-family: var(--sans); font-size: .8rem; font-weight: 700; color: var(--coral); text-transform: uppercase; letter-spacing: .14em; }
 .hero .eyebrow { font-family: var(--sans); font-size: .95rem; }
 .ticks { list-style: none; padding: 0; margin: 0 0 1rem; }
 .ticks li { padding: .3rem 0 .3rem 1.7rem; position: relative; }
 .ticks li::before { content: ""; position: absolute; left: .2rem; top: .78em; width: .7rem; height: .7rem; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 3px var(--teal-tint); }
-.status-note { display: inline-block; background: var(--coral); color: #fff; font-weight: 800; padding: .5rem 1rem; border-radius: 6px; transform: rotate(-1deg); margin-top: .8rem; }
-.tilt img { transform: rotate(1.5deg); border: 8px solid #fff; }
+.status-note { display: inline-block; background: var(--coral); color: #fff; font-weight: 800; padding: .5rem 1rem; border-radius: 6px; margin-top: .8rem; border-left: 6px solid var(--navy); border-radius: 3px; }
+.tilt img { border: 6px solid #fff; outline: 1px solid #d9d4c7; }
 .load-error { background: #fff4cf; padding: 1rem; margin: 1rem; border-radius: var(--radius); font-weight: 700; }
 .admin-link { color: rgba(255,255,255,.75) !important; font-size: .85rem; margin-left: .5rem; }
 .more-btn { font: inherit; font-weight: 700; color: var(--teal); background: none; border: 0; padding: .2rem 0; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; min-height: 44px; }
@@ -490,3 +490,18 @@ input[type=file] { font: inherit; width: 100%; padding: .6rem; border: 2px dashe
 .donate-box h3 { margin-top: 1.5rem; }
 div.donate-box { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); border-left: 6px solid var(--red); padding: 1rem 1.3rem; margin-top: 1.5rem; }
 div.donate-box h3 { margin-top: 0; }
+
+/* ===== classic car-club look (v3) ===== */
+:root { --display: "Oswald", "Arial Narrow", Impact, sans-serif; }
+h1, h2 { font-family: var(--display); font-weight: 600; letter-spacing: .02em; text-transform: uppercase; line-height: 1.1; }
+h3 { letter-spacing: 0; }
+.hand-h::after { display: none; }
+/* pinstripe under section headings: red line over a thin navy line */
+main section h2, .page-title h1 { padding-bottom: .45rem; background: linear-gradient(var(--coral), var(--coral)) left bottom 4px / 3.2rem 3px no-repeat, linear-gradient(var(--navy), var(--navy)) left bottom / 3.2rem 1px no-repeat; }
+.band-dark h2 { background: linear-gradient(#fff, #fff) left bottom 4px / 3.2rem 3px no-repeat, linear-gradient(var(--coral), var(--coral)) left bottom / 3.2rem 1px no-repeat; }
+.hero h1 { font-size: clamp(2rem, 6vw, 3.4rem); letter-spacing: .03em; }
+.join-btn, .btn { font-family: var(--display); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+.page-title { border-bottom: 1px solid #e3ddcf; }
+.status-note { font-family: var(--display); letter-spacing: .04em; font-weight: 500; }
+.label, main .label { font-size: .8rem; letter-spacing: .14em; margin-bottom: .35rem; }
+.summary-menu, .menu summary { font-family: var(--display); letter-spacing: .06em; text-transform: uppercase; }

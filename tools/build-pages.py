@@ -23,7 +23,7 @@ def head(title, desc=DESC, extra=""):
 <link rel="icon" href="images/1b97d2c0-HOCC-Logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css?v={VER}">{extra}
 </head>
 '''
@@ -38,7 +38,7 @@ def header(cur):
 <header class="site-header">
   <div class="wrap header-top">
     <a class="brand" href="index.html"><img src="images/1b97d2c0-HOCC-Logo.png" alt="Heart of Oklahoma Corvette Club logo"><span>Heart of Oklahoma Corvette Club</span></a>
-    <a class="join-btn" href="car-show.html" data-href="settings.headerButtonLink"><span class="l-full" data-t="settings.headerButtonText">2027 Car Show</span><span class="l-short" data-t="settings.headerButtonShort">Car Show</span></a>
+    <a class="join-btn" href="car-show.html" data-href="settings.headerButtonLink"><span class="l-full" data-t="settings.headerButtonText">REGISTER</span><span class="l-short" data-t="settings.headerButtonShort">REGISTER</span></a>
     <details class="menu"><summary>Menu</summary><ul>{menu}</ul></details>
   </div>
   <nav class="nav" aria-label="Main"><div class="wrap"><ul>{nav}</ul></div></nav>
@@ -96,12 +96,13 @@ def autotag(fn, body):
     return TAGRE.sub(rep, body)
 
 def page(fn, title, pageid, cur, body, desc=DESC):
+    body = re.sub(r'\s*<p class="label">[^<]*</p>', '', body)  # no eyebrow labels
     html = head(title, desc) + f'<body data-page="{pageid}">\n' + header(cur) + '\n<main id="main">\n' + autotag(fn, body.strip()) + '\n</main>\n\n' + FOOTER
     open(fn, "w").write(html.replace('__VER__', VER))
 
 def title_block(label, h1, sub_id=None, sub=""):
     s = f'<p id="{sub_id}">{sub}</p>' if sub_id else ""
-    return f'<div class="page-title"><div class="wrap"><p class="label">{label}</p><h1>{h1}</h1>{s}</div></div>\n'
+    return f'<div class="page-title"><div class="wrap"><h1>{h1}</h1>{s}</div></div>\n'
 
 FS_HIDDEN = '<input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value=""><input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true">'
 
@@ -112,10 +113,10 @@ page("index.html", "Home", "home", "index.html", '''
     <img class="hero-img" id="hero-img" src="images/42bc1aed-CS-1.jpg" alt="Rows of Corvettes with hoods raised at the club car show">
     <div class="wrap hero-text">
       <p class="eyebrow hide-m" id="hero-eyebrow">Oklahoma Corvette club &middot; Not-For-Profit &middot; 501(c)(3)</p>
-      <h1 id="hero-title">Corvette people, good company, and a hand for those in need.</h1>
+      <h1 id="hero-title">Heart of Oklahoma Corvette Club</h1>
       <p class="hide-m" id="hero-text"></p>
       <div class="btn-row">
-        <a class="btn gold" id="hero-b1" href="car-show.html">Car Show info</a>
+        <a class="btn gold" id="hero-b1" href="car-show.html">REGISTER</a>
         <a class="btn light hide-m" id="hero-b2" href="events.html">Upcoming events</a>
       </div>
     </div>
@@ -124,7 +125,7 @@ page("index.html", "Home", "home", "index.html", '''
   <section class="band">
     <div class="wrap">
       <p class="label">On the calendar</p>
-      <h2 class="hand-h">Coming up</h2>
+      <h2>Upcoming Events</h2>
       <div id="home-events"></div>
       <p><a class="btn dark" href="events.html">All upcoming events</a></p>
     </div>
@@ -134,12 +135,12 @@ page("index.html", "Home", "home", "index.html", '''
     <div class="wrap two">
       <div>
         <p class="label">Our purpose</p>
-        <h2>Why the club exists</h2>
+        <h2>Our Purpose</h2>
         <div id="purpose"></div>
       </div>
       <div>
         <p class="label">Club officers</p>
-        <h2>Who to look for</h2>
+        <h2>Club Officers</h2>
         <ul class="officer-mini" id="officer-mini"></ul>
         <p style="margin-top:.6rem"><a href="about.html#officers">Meet our club officers</a></p>
       </div>
@@ -149,7 +150,7 @@ page("index.html", "Home", "home", "index.html", '''
   <section class="band">
     <div class="wrap">
       <p class="label">From our car show</p>
-      <h2 class="hand-h" id="home-photos-title">A few photos</h2>
+      <h2 id="home-photos-title">A few photos</h2>
       <div id="home-photos"></div>
       <p style="margin-top:1rem"><a class="btn dark" href="gallery.html">See all photos</a></p>
     </div>
@@ -176,7 +177,7 @@ page("index.html", "Home", "home", "index.html", '''
   <section class="sponsor-strip">
     <div class="wrap">
       <p class="label">With thanks</p>
-      <h2>Our sponsors</h2>
+      <h2>Our Sponsors</h2>
       <div id="home-sponsors"></div>
     </div>
   </section>
@@ -246,7 +247,7 @@ page("car-show.html", "Car Show", "car-show", "car-show.html", '''
   <section class="band" id="hotels-sec">
     <div class="wrap">
       <p class="label">Where to stay</p>
-      <h2 class="hand-h">Hotels &amp; lodging</h2>
+      <h2>Hotels &amp; lodging</h2>
       <div id="cs-hotels-note" hidden></div>
       <p>Use the group code when you call, or scan the QR code with your phone camera.</p>
       <ul class="hotels" id="cs-hotels"></ul>
@@ -388,8 +389,8 @@ page("membership.html", "Membership", "membership", "", title_block("Membership"
         </fieldset>
         <fieldset>
           <legend>Which membership?</legend>
-          <label class="choice"><input type="radio" name="plan" value="Single $40" data-plan="single" required> <span id="plan-single-label">Single &mdash; $40</span></label>
-          <label class="choice"><input type="radio" name="plan" value="Family $50" data-plan="family"> <span id="plan-family-label">Family &mdash; $50</span></label>
+          <label class="choice"><input type="radio" name="plan" value="Single $40" data-plan="single" required> <span id="plan-single-label">Single: $40</span></label>
+          <label class="choice"><input type="radio" name="plan" value="Family $50" data-plan="family"> <span id="plan-family-label">Family: $50</span></label>
         </fieldset>
         <fieldset>
           <legend>About you</legend>
@@ -447,7 +448,7 @@ page("thanks-contact.html", "Message sent", "thanks-c", "", title_block("Contact
   </div></section>
 ''')
 
-page("thanks-registration.html", "Registration", "thanks-reg", "", '<div class="page-title"><div class="wrap"><p class="label">Car show</p><h1 id="tr-title">Thank you!</h1></div></div>' + '''
+page("thanks-registration.html", "Registration", "thanks-reg", "", '<div class="page-title"><div class="wrap"><h1 id="tr-title">Thank you!</h1></div></div>' + '''
   <section><div class="wrap narrow" id="tr-pay"></div>
   <div class="wrap narrow"><p><a class="btn dark" href="car-show.html">Back to the car show page</a></p></div></section>
 ''')
@@ -460,5 +461,6 @@ t = c.setdefault("text", {})
 added = 0
 for k, v in TEXT.items():
     if k not in t: t[k] = v; added += 1
+for k in [k for k in t if k not in TEXT]: del t[k]  # text that is no longer on any page
 json.dump(c, open("content/site.json", "w"), indent=1, ensure_ascii=False)
 print("pages written;", len(TEXT), "page-text keys,", added, "new")
