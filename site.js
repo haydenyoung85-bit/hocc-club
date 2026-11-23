@@ -189,7 +189,6 @@
     fill('#sponsors-intro', esc(D.sponsors.intro));
     fill('#sponsors', sponsorsHtml(0));
     fill('#trailer', D.sponsors.trailerPhoto ? img(D.sponsors.trailerPhoto, D.sponsors.trailerCaption) + '<figcaption>' + esc(D.sponsors.trailerCaption) + '</figcaption>' : '');
-    var dn = safeUrl(get('settings.donateLink')); var de = $('#donate'); if (de) { de.hidden = !dn; if (dn) de.href = dn; }
   };
   R.contact = function () {
     fill('#contact-intro', esc(D.contact.intro));
@@ -293,7 +292,6 @@
       return '<li>' + (l ? '<a href="' + esc(l) + '">' + inner + '</a>' : inner) + '</li>';
     }).join(''));
     fill('#cs-benefit', esc(c.benefitText));
-    var dn = safeUrl(get('settings.donateLink')); var de = $('#donate'); if (de) { de.hidden = !dn; if (dn) de.href = dn; }
     registration();
   };
 
@@ -407,6 +405,10 @@
     .then(function (data) {
       D = data;
       bindings();
+      // Donate button: only on the Charities page and the home "Giving back" block
+      var dn = safeUrl(get('settings.donateLink'));
+      document.querySelectorAll('.donate-btn').forEach(function (a) { if (dn) a.href = dn; });
+      document.querySelectorAll('.donate-box').forEach(function (b) { b.hidden = !dn; });
       var fn = R[page.replace(/-/g, '')];
       if (fn) fn();
       wireMore();

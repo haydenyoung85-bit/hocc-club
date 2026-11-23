@@ -486,3 +486,7 @@ input[type=file] { font: inherit; width: 100%; padding: .6rem; border: 2px dashe
 .tag.sold { background: var(--red); }
 .hero .btn.light { color: var(--teal); }
 .modal-card { border-top: 6px solid var(--red); }
+
+.donate-box h3 { margin-top: 1.5rem; }
+div.donate-box { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); border-left: 6px solid var(--red); padding: 1rem 1.3rem; margin-top: 1.5rem; }
+div.donate-box h3 { margin-top: 0; }

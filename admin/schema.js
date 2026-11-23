@@ -176,7 +176,7 @@
         { key: 'phone', label: 'Club phone (leave empty to hide)', type: 'phone', needsInfo: true },
         { key: 'address', label: 'Mailing address', type: 'longtext' },
         { key: 'facebook', label: 'Facebook page link', type: 'url' },
-        { key: 'donateLink', label: 'PayPal Donate link', type: 'url' },
+        { key: 'donateLink', label: 'PayPal Donate link (button shows on the Charities page and home page only)', type: 'url' },
         { key: 'headerButtonText', label: 'Gold button at the top of every page (computers)', type: 'text' },
         { key: 'headerButtonShort', label: 'Gold button at the top (phones, short)', type: 'text' },
         { key: 'headerButtonLink', label: 'Gold button goes to', type: 'link' },

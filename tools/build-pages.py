@@ -162,6 +162,7 @@ page("index.html", "Home", "home", "index.html", '''
       <div>
         <h2>Giving back</h2>
         <p id="home-giving"></p>
+        <p class="donate-box" hidden><a class="btn light donate-btn" href="#">Donate to our charities</a></p>
         <p><a href="charities.html">Our charities and sponsors</a></p>
       </div>
       <div class="join-quiet">
@@ -237,7 +238,6 @@ page("car-show.html", "Car Show", "car-show", "car-show.html", '''
         <h3>Show details</h3>
         <div id="cs-details"></div>
         <p id="cs-benefit"></p>
-        <p><a class="btn dark" id="donate" href="#" hidden>Donate with PayPal</a></p>
       </div>
       <figure id="cs-image" class="tilt"></figure>
     </div>
@@ -316,7 +316,7 @@ page("for-sale.html", "For Sale", "for-sale", "for-sale.html", title_block("Memb
 
 page("charities.html", "Charities & Sponsors", "charities", "", title_block("Community", "Charities &amp; Sponsors", "charities-intro") + '''
   <section><div class="wrap"><h2>Our Charities</h2><div id="charities"></div>
-    <p style="margin-top:1rem"><a class="btn dark" id="donate" href="#" hidden>Donate with PayPal</a></p></div></section>
+    <div class="donate-box" hidden><h3>Help us give back</h3><p>Donations go to the charities the club supports. This is not for show registration or dues.</p><p><a class="btn gold donate-btn" href="#">Donate to our charities</a></p></div></div></section>
   <section class="band">
     <div class="wrap">
       <p class="label">With thanks</p>
