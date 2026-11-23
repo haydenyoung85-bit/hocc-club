@@ -42,7 +42,7 @@ the club (through the admin panel) and developers/Claude (through git). Don't br
 
 ## Rules
 - **Mobile-first and compact.** Most visitors are on phones. Short scroll, no endless stacked sections; use horizontal strips, 2–3 column grids, accordions and "Read more" on phones. Check 390px width.
-- **Look:** keep the hand-made, lively feel (teal/gold/navy/sand palette, Plus Jakarta Sans + the Caveat handwritten labels, gold underline swashes, tilted photos). **No AI-SaaS look:** no dark-mode glows, no purple/neon gradients, no shimmer, no glassmorphism.
+- **Look:** keep the hand-made, lively feel (red, white and blue club colors, Plus Jakarta Sans + the Caveat handwritten labels, red underline swashes, flag stripes, tilted photos). **No AI-SaaS look:** no dark-mode glows, no purple/neon gradients, no shimmer, no glassmorphism.
 - **Show registration stays hidden** until the club flips the switch (`registration.enabled` in site.json, "Show Registration" in the admin). Never show registration, the countdown, waitlist or T-shirt pop-up while it's off. Don't change `enabled` yourself unless Hayden says so.
 - **Payments are PayPal (the club's existing account). No Stripe.** Payment buttons are just PayPal links stored in site.json.
 - Forms (membership, contact, for-sale submissions, registration) post to FormSubmit.co → `settings.email`. For Sale submissions are never auto-published; the admin approves them (`status: "approved"`).
@@ -61,3 +61,11 @@ The domain stays registered at Squarespace; only DNS changes.
 ## Known limits
 - No database: "spots left" for registration is a number the admin updates by hand; registrations/forms arrive as emails (FormSubmit needs a one-time activation click from hoccclub@gmail.com on first use).
 - Still waiting on info: DRT shop link, dinner and T-shirt prices, PayPal links for membership/registration/apparel, club phone.
+
+## Caching (important)
+GitHub Pages tells browsers to cache files for 10 minutes. So:
+- After changing `style.css` or `site.js`, run `python3 tools/build-pages.py` — it stamps `?v=<timestamp>` on them in every page.
+- The admin (`admin/index.html`) always loads its CSS/JS with `?v=<now>` and fetches `login.json` / content with `cache: 'no-store'`, so it never runs stale code. Bump `ADMIN_VERSION` in `admin/admin.js` when you change the admin; it clears old login sessions.
+
+## Colors
+Club theme is red, white and blue: red `#C8102E` (main buttons), blue `#0A2463`, navy text `#0b1b3f`, white, warm off-white `#f8f5ef`. Flag stripes (hard color stops) under the header and above the footer are the only "gradient". (CSS variable names like `--teal`/`--gold` are legacy; their values are the blue/red.)

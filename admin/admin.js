@@ -4,6 +4,7 @@
   var CFG = window.HOCC_ADMIN_CONFIG, SCHEMA = window.HOCC_SCHEMA;
   var API = 'https://api.github.com/repos/' + CFG.owner + '/' + CFG.repo + '/contents/';
   var app = document.getElementById('app');
+  var ADMIN_VERSION = '2026-11-23-rwb-username';
   var S = { token: null, email: null, data: null, sha: null, work: null, section: null, dirty: false };
 
   /* ---------- small helpers ---------- */
@@ -108,13 +109,18 @@
     var tries = 0;
     var form = h('form', { class: 'card login', onsubmit: function (e) {
       e.preventDefault(); err.textContent = ''; btn.disabled = true; btn.textContent = 'Checking…';
-      var em = email.value.trim().toLowerCase();
+      var em = email.value.replace(/\s+/g, '').toLowerCase();
       loadLoginFile().then(function (lf) {
         var users = (lf && lf.users) || [];
         if (!users.length) throw { notOn: true };
         var u = users.filter(function (x) { return String(x.email).trim().toLowerCase() === em; })[0];
         if (!u) throw { bad: true };
-        return decryptToken(u, pw.value).catch(function () { throw { bad: true }; });
+        var typed = pw.value, trimmed = typed.trim();
+        // try exactly what was typed, then without spaces at the ends (phones sometimes add one)
+        return decryptToken(u, typed).catch(function () {
+          if (trimmed !== typed) return decryptToken(u, trimmed);
+          throw new Error('bad');
+        }).catch(function () { throw { bad: true }; });
       }).then(function (token) {
         S.token = token; S.email = em;
         sessionStorage.setItem('hocc_admin', JSON.stringify({ t: token, e: em }));
@@ -137,6 +143,7 @@
       h('p', { class: 'small' }, ['Forgot your password? Ask your website helper to reset it.'])
     ]);
     app.appendChild(form);
+    app.appendChild(h('p', { class: 'ver', text: 'Admin version ' + ADMIN_VERSION }));
     email.focus();
   }
 
@@ -546,6 +553,14 @@
 
   /* ---------- boot ---------- */
   window.addEventListener('beforeunload', function (e) { if (S.dirty) { e.preventDefault(); e.returnValue = ''; } });
+  // clear anything left over from older versions of the admin (or the old preview site)
+  try {
+    if (sessionStorage.getItem('hocc_admin_ver') !== ADMIN_VERSION) { sessionStorage.removeItem('hocc_admin'); sessionStorage.setItem('hocc_admin_ver', ADMIN_VERSION); }
+    Object.keys(localStorage).forEach(function (k) { if (/hocc|tour/i.test(k)) localStorage.removeItem(k); });
+  } catch (e) { /* private mode */ }
+  if (navigator.serviceWorker && navigator.serviceWorker.getRegistrations) {
+    navigator.serviceWorker.getRegistrations().then(function (rs) { rs.forEach(function (r) { r.unregister(); }); }).catch(function () {});
+  }
   var saved = null;
   try { saved = JSON.parse(sessionStorage.getItem('hocc_admin') || 'null'); } catch (e) { saved = null; }
   if (saved && saved.t) { S.token = saved.t; S.email = saved.e; start(); } else loginScreen();

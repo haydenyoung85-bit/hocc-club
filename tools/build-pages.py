@@ -1,5 +1,7 @@
 # Writes the HTML page shells. Content is filled in by site.js from content/site.json.
 # Run from the site folder:  python3 tools/build-pages.py
+import time
+VER = time.strftime("%Y%m%d%H%M")  # cache-buster: changes every time pages are rebuilt
 NAV = [("index.html", "Home"), ("about.html", "About"), ("events.html", "Events"), ("car-show.html", "Car Show"),
        ("gallery.html", "Photos"), ("for-sale.html", "For Sale"), ("apparel.html", "Apparel"), ("contact.html", "Contact")]
 MENU_EXTRA = [("membership.html", "Membership"), ("charities.html", "Charities & Sponsors")]
@@ -22,7 +24,7 @@ def head(title, desc=DESC, extra=""):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">{extra}
+<link rel="stylesheet" href="style.css?v={VER}">{extra}
 </head>
 '''
 
@@ -67,7 +69,7 @@ FOOTER = '''<footer class="site-footer">
   </div>
 </footer>
 <noscript><p class="load-error">This website needs JavaScript turned on. You can always email the club at hoccclub@gmail.com.</p></noscript>
-<script src="site.js" defer></script>
+<script src="site.js?v=__VER__" defer></script>
 </body>
 </html>
 '''
@@ -95,7 +97,7 @@ def autotag(fn, body):
 
 def page(fn, title, pageid, cur, body, desc=DESC):
     html = head(title, desc) + f'<body data-page="{pageid}">\n' + header(cur) + '\n<main id="main">\n' + autotag(fn, body.strip()) + '\n</main>\n\n' + FOOTER
-    open(fn, "w").write(html)
+    open(fn, "w").write(html.replace('__VER__', VER))
 
 def title_block(label, h1, sub_id=None, sub=""):
     s = f'<p id="{sub_id}">{sub}</p>' if sub_id else ""
@@ -450,7 +452,7 @@ page("thanks-registration.html", "Registration", "thanks-reg", "", '<div class="
 ''')
 
 open("car-show-2026.html", "w").write('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Car Show</title><meta http-equiv="refresh" content="0; url=car-show.html"><link rel="canonical" href="car-show.html"></head><body><p><a href="car-show.html">Go to the car show page</a></p></body></html>\n')
-open("404.html", "w").write(head("Page not found") + '<body data-page="404">\n' + header("") + '\n<main id="main">' + title_block("Oops", "That page is not here") + '<section><div class="wrap"><p><a class="btn dark" href="index.html">Go to the home page</a></p></div></section></main>\n' + FOOTER.replace('src="site.js"', 'src="site.js"'))
+open("404.html", "w").write(head("Page not found") + '<body data-page="404">\n' + header("") + '\n<main id="main">' + title_block("Oops", "That page is not here") + '<section><div class="wrap"><p><a class="btn dark" href="index.html">Go to the home page</a></p></div></section></main>\n' + FOOTER.replace('__VER__', VER))
 # add any new page-text keys to the content file (never overwrites the club's edits)
 c = json.load(open("content/site.json"))
 t = c.setdefault("text", {})
