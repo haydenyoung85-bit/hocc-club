@@ -496,9 +496,6 @@ div.donate-box h3 { margin-top: 0; }
 h1, h2 { font-family: var(--display); font-weight: 600; letter-spacing: .02em; text-transform: uppercase; line-height: 1.1; }
 h3 { letter-spacing: 0; }
 .hand-h::after { display: none; }
-/* pinstripe under section headings: red line over a thin navy line */
-main section h2, .page-title h1 { padding-bottom: .45rem; background: linear-gradient(var(--coral), var(--coral)) left bottom 4px / 3.2rem 3px no-repeat, linear-gradient(var(--navy), var(--navy)) left bottom / 3.2rem 1px no-repeat; }
-.band-dark h2 { background: linear-gradient(#fff, #fff) left bottom 4px / 3.2rem 3px no-repeat, linear-gradient(var(--coral), var(--coral)) left bottom / 3.2rem 1px no-repeat; }
 .hero h1 { font-size: clamp(2rem, 6vw, 3.4rem); letter-spacing: .03em; }
 .join-btn, .btn { font-family: var(--display); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
 .page-title { border-bottom: 1px solid #e3ddcf; }
