@@ -108,56 +108,6 @@
   "intro": "Membership is required for club sponsored events.",
   "items": [
    {
-    "title": "HOCC's Annual Fall Foliage Corvette Cruise Adventure",
-    "start": "2026-10-23",
-    "end": "2026-10-25",
-    "time": "9 am",
-    "place": "Cherokee Casino & Hotel Roland",
-    "address": "109 Cherokee Blvd, Roland, OK 74954",
-    "details": "",
-    "show": true
-   },
-   {
-    "title": "HOCC Board Meeting",
-    "start": "2026-11-03",
-    "end": "",
-    "time": "6:00 pm – 8:00 pm",
-    "place": "Van's Pig Stand",
-    "address": "1991 Tower Dr, Moore, OK 73160",
-    "details": "",
-    "show": true
-   },
-   {
-    "title": "HOCC Ladies Night Out Dinner",
-    "start": "2026-11-04",
-    "end": "",
-    "time": "7:00 pm – 9:00 pm",
-    "place": "BJ's Restaurant & Brewhouse",
-    "address": "330 Ed Noble Pkwy, Norman, OK 73072",
-    "details": "",
-    "show": true
-   },
-   {
-    "title": "Midwest City Veterans Day Parade",
-    "start": "2026-11-11",
-    "end": "",
-    "time": "8:00 am – 3:30 pm",
-    "place": "Midwest City, OK",
-    "address": "",
-    "details": "",
-    "show": true
-   },
-   {
-    "title": "HOCC November Membership Meeting",
-    "start": "2026-11-21",
-    "end": "",
-    "time": "1:00 pm – 3:00 pm",
-    "place": "Yellow Rose Dinner Theater",
-    "address": "1005 SW 4th St, Moore, OK",
-    "details": "",
-    "show": true
-   },
-   {
     "title": "HOCC Christmas Party",
     "start": "2026-12-12",
     "end": "",
