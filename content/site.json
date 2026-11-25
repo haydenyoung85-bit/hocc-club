@@ -74,6 +74,20 @@
     "photo": "images/1f68d82e-Carolyn-Thompson.png",
     "bio": "Carolyn retired from a non-profit after 17 years as a contractor at Tinker Air Force Base. Loves all corvettes but has a special place in her heart for C3’s. Enjoys flowers, woodworking and grandkids.",
     "show": true
+   },
+   {
+    "name": "Troy Brazell",
+    "role": "Member At Large",
+    "photo": "",
+    "bio": "",
+    "show": true
+   },
+   {
+    "name": "Laura Van Doren",
+    "role": "Secretary",
+    "photo": "",
+    "bio": "",
+    "show": true
    }
   ],
   "faqs": [
